@@ -177,6 +177,20 @@ Some defaults are included, like on PBWoW.com
 }
 
 
+/* bbGuild player-detail panes (Character Info/Professions/Mythic+/
+ * Activity) and the equivalent Base/Melee/Spell stat-group headers --
+ * match the tab bar's gold accent and natural capitalisation instead of
+ * bbguild's/bbguildwow's generic muted ALL-CAPS default.
+--------------------------------------------- */
+
+.player-detail-pane-title,
+.wow-stats-group h4 {
+	color: #f8b700;
+	text-transform: none;
+	opacity: 1;
+}
+
+
 /* PBWoW.com specific stuff (personal preference)
 --------------------------------------------- */
 
