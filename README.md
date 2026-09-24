@@ -3,7 +3,7 @@
 Author @Paybas, @Sajaki
 
 ## requirements
-- phpBB 3.3.18 or higher. it's compatible with 3.3.19
+- phpBB 3.3.18 or higher (compatible with 3.3.19)
 - pbwowExt (optional)
 
 ## Support
