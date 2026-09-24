@@ -16,6 +16,7 @@ Author @Paybas, @Sajaki
 3.3.20 (24-09-2026)
 
 - updated for phpBB 3.3.18
+- fixed missing contact icons: removed the `.contact-icon` override that pointed at a sprite this style does not ship, so prosilver's icons are used instead
 
 3.3.19 (30-04-2026)
 
