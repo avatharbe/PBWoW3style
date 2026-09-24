@@ -1,9 +1,9 @@
 ## PBWoW 3 Style for phpBB 3.3.18
 
-Author @Paybas, @Sajaki
+Authors: @Paybas and @Sajaki
 
-## requirements
-- phpBB 3.3.18 or higher
+## Requirements
+- phpBB 3.3.18 or higher 
 - pbwowExt (optional)
 
 ## Support
@@ -11,137 +11,165 @@ Author @Paybas, @Sajaki
 
 ## Changes
 3.3.20 (24-09-2026)
-- updated for phpBB 3.3.18 prosilver — both prosilver template changes are inherited, as pbwow3 overrides neither: `login_body_oauth.html` (`oauth.REDIRECT_URL` renamed to `oauth.LOGIN_URL`, from PHPBB-17659 "Move oauth login to controllers" in 3.3.17) and the new `mcp_topic_postrow_post_after` event (PHPBB-17661 in 3.3.18)
-- fix: contact icons were broken in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar — each declared `.contact-icon { background-image: url("./images/icons/icons_contact.png"); }` without shipping that file, so the sprite returned 404
-- removed pbwow3's duplicate `icons_contact.png` (pixel-identical to prosilver's, only re-encoded) together with all four redundant `.contact-icon` overrides; every style now uses prosilver's sprite and prosilver's positions. This matters for 3.3.18: PHPBB-17623 "switch twitter to x in profile" replaces the Twitter bird with the X logo and moves `.phpbb_twitter-icon` from `-203px` to `-202px`. Keeping the duplicate would have left these styles showing the old bird while prosilver showed X. Future prosilver sprite changes are now picked up automatically too
-- added `pointer-events: none` to `#video-background` as defence in depth against the pbwowext click-shield that made static footers unclickable (fixed upstream in pbwowext 3.3.2); placed in pbwow3/theme/extensions.css and pbwow3_heroes/theme/custom.css so both CSS chains are covered
+
+- Updated for phpBB 3.3.18. The style automatically uses prosilver's updated OAuth login template and new moderation template event; no template overrides were needed.
+- Fixed missing contact icons in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar.
+- All styles now use prosilver's contact icons instead of keeping separate copies. This includes the new X logo in phpBB 3.3.18 and ensures future icon updates appear automatically.
+- Prevented the video background layer from blocking clicks on footer links. This adds protection alongside the fix in pbwowExt 3.3.2 and covers both pbwow3 and pbwow3_heroes.
 
 3.3.19 (30-04-2026)
-- updated for phpBB 3.3.16 prosilver (#28)
+
+- Updated for phpBB 3.3.16. (#28)
 
 3.3.18 (30-04-2026)
-- fix: search results no longer stack — switched `.search.post > .inner` to flex layout so postprofile (23.5%) and postbody sit side-by-side reliably; the searchresults link wraps to its own row below (#27)
-- fix: postprofile in search results is now left-aligned (was inheriting `text-align: center` from the general `.postprofile` rule)
-- removed stale `.search .postprofile { width: 30% }` rule in content.css of pbwow3, pbwow3_heroes and pbwow3_overwatch (forms.css's 23.5% always won by source order — dead code)
-- same flex search-layout fix applied to pbwow3_heroes and pbwow3_overwatch (which carry their own forms.css overrides)
-- replaced per-file `?hash=...` query strings on `@import` rules with a shared `?v={style_version}` stamp in pbwow3, pbwow3_heroes, and pbwow3_overwatch — one version bump now invalidates all imported CSS files at once, no more per-file hash bookkeeping
+
+- Fixed the search results layout in pbwow3, pbwow3_heroes and pbwow3_overwatch. Author details now appear beside the post text, with the search results link on a separate row below. (#27)
+- Left-aligned author details in search results.
+- Removed unused rules for the width of author details in those three styles.
+- Simplified stylesheet caching in those three styles. Updating the style version now makes browsers reload all imported stylesheets, without having to update a separate identifier for each file.
 
 3.3.17 (01-03-2026)
-- fix: restore empty videobg.html placeholder, fixing Twig LoaderError crash when video backgrounds are enabled in pbwowExt
+
+- Restored the empty videobg.html template. Its absence caused a template-loading error when video backgrounds were enabled in pbwowExt.
 
 3.3.16 (22-02-2026)
-- fixed hardcoded assets_version in prosilver stylesheet link
-- removed unnecessary prosilver en/stylesheet.css
-- use T_STYLESHEET_LANG_LINK for language stylesheet
-- use T_THEME_PATH for bidi.css
-- removed tweaks.css IE conditional (file does not exist)
-- removed empty videobg.html
-- removed unused plupload images
-- updated webfont URL in simple_header.html
+
+- Fixed the prosilver stylesheet link so it uses the current asset version instead of a fixed value.
+- Removed an unnecessary reference to prosilver's English stylesheet.
+- Used phpBB's language stylesheet setting to load the correct stylesheet.
+- Used the theme path setting to locate bidi.css, the stylesheet for right-to-left languages.
+- Removed an Internet Explorer rule that tried to load the missing tweaks.css file.
+- Removed the empty videobg.html template.
+- Removed unused upload images.
+- Updated the webfont URL in simple_header.html.
 
 3.3.15 (08-02-2026)
-- updated for phpBB 3.3.15
-- updated post display links to use AJAX anchors (viewtopic)
-- added viewtopic_body_postrow_content_before event
-- added viewtopic_body_online_list_after event
-- added forum link type detection in forumlist tooltips
-- updated jQuery fallback to 3.7.1
-- updated autocomplete attributes on login forms
-- simplified search results sort condition
-- updated IE conditional to IE 9
+
+- Updated for phpBB 3.3.15.
+- Updated post display links to use phpBB's AJAX behaviour.
+- Added template events before post content and after the online-user list, allowing extensions to add content in those locations.
+- Updated forum-list tooltips to recognise forums that link to another page.
+- Updated the backup copy of jQuery to version 3.7.1.
+- Updated login forms to help browsers autofill the correct fields.
+- Simplified the check used to sort search results.
+- Updated the Internet Explorer condition to target IE 9.
 
 3.3.5 (24-04-2022)
-- updated for phpBB 3.3.5
-- added pbwow3_diablo
+
+- Updated for phpBB 3.3.5.
+- Added the pbwow3_diablo style.
 
 3.3.2 (29-05-2021)
-- updated for phpBB 3.3.4
+
+- Updated for phpBB 3.3.4.
 
 3.3.1 (17-10-2020)
-- updated for phpBB 3.3.1
+
+- Updated for phpBB 3.3.1.
 
 3.3.0 (07-07-2020)
-- updated for phpBB 3.3.0
+
+- Updated for phpBB 3.3.0.
 
 3.2.11 (29-05-2021)
-- updated for phpBB 3.2.10
+
+- Updated for phpBB 3.2.10.
 
 3.2.10 (07-07-2020)
-- support for S_PBWOW_SMALL_RANKS
+
+- Added support for small rank images through S_PBWOW_SMALL_RANKS.
 
 3.2.9 (02-02-2020)
-- updated for phpBB 3.2.9
+
+- Updated for phpBB 3.2.9.
 
 3.2.8 (20-10-2019)
-- updated for phpBB 3.2.8 (new events)
+
+- Updated for phpBB 3.2.8 (added template events).
 
 3.2.7 (04-06-2019)
-- updated for phpBB 3.2.7 (new events)
+
+- Updated for phpBB 3.2.7 (added template events).
 
 3.2.2 (16-03-2018)
-- updated for phpBB 3.2.2 (markup changes and new events)
-- fixed missing 'mark read' link in navbar
+
+- Updated for phpBB 3.2.2 (updated HTML and added template events).
+- Restored the missing ‘Mark read’ link in the navigation bar.
 
 3.2.1.6 (15-10-2017)
-- fix contact icon appearance
-- fix topic icon size
-- fix duplicate arrows
+
+- Fixed the appearance of contact icons.
+- Fixed topic icon sizes.
+- Removed duplicate arrows.
 
 3.2.1.5 (12-10-2017)
-- fix #16 "fixed" background 
+
+- Fixed an issue with the fixed background. (#16)
 
 3.2.1.4 (11-10-2017)
-- moved some css to pbwow extension
-- fixed poll view
-- fixed pm view
-- converted to twig syntax
+
+- Moved some CSS rules to the pbwow extension.
+- Fixed the poll layout.
+- Fixed the private message layout.
+- Converted templates to Twig syntax.
 
 3.2.1.3 (08-10-2017)
-- fixed avatar in responsive view
+
+- Fixed avatar display on smaller screens.
 
 3.2.1.2 (28-09-2017)
-- many more fixes
+
+- Various fixes.
 
 3.2.1.1 (09-09-2017)
-- Fix for Responsive view
+
+- Fixed the layout on smaller screens.
 
 3.2.1 (28-08-2017)
-- updated for phpbb 3.2.1
+
+- Updated for phpBB 3.2.1.
 
 3.2.0 (29-08-2017)
-- updated for phpbb 3.2.0
+
+- Updated for phpBB 3.2.0.
  
 3.1.10 (15-12-2016)
-- updated for phpbb 3.1.10
+
+- Updated for phpBB 3.1.10.
 
 3.0.8.3
-- remove redundant recent items css
+
+- Removed unnecessary CSS rules for recent items.
 
 3.0.8.2 (19-6-2016)
-- updated for phpbb 3.1.9
-- updated for recent topics 2.1
-- fix avatar offset
+
+- Updated for phpBB 3.1.9.
+- Updated for Recent Topics 2.1.
+- Fixed avatar positioning.
 
 3.0.7 (28-2-2016)
-- updated for phpbb 3.1.8
+
+- Updated for phpBB 3.1.8.
 
 3.0.6 (28-2-2016)
-- updated for phpbb 3.1.7
+
+- Updated for phpBB 3.1.7.
 
 3.0.5 (28-2-2016)
-- updated for phpbb 3.1.6
-- added theme images for pbWoW (only the Core Theme)
-- fixed placement of avatar
 
-## Use
-- Copy pbwow3 folder to styles
-- go to ACP -> Customise -> Install Styles and click the Install link. 
+- Updated for phpBB 3.1.6.
+- Added theme images for the pbWoW Core Theme.
+- Fixed avatar positioning.
+
+## Installation
+1. Copy the pbwow3 folder into your forum’s styles folder.
+2. Open the Administration Control Panel (ACP), go to Customise → Install Styles, and click Install.
 
 ## License
 
 [GNU General Public License v2](http://opensource.org/licenses/gpl-2.0.php)
-This application is opensource software released under the GPL.
+This style is open-source software released under the GPL.
 We request that you retain the copyright notice below.
 
 ## Credits 
-Thank you to @Galixte, @shadowfox for supporting
+Thank you to @Galixte and @shadowfox for their support.
