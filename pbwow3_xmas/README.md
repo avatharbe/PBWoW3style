@@ -4,7 +4,7 @@
 Author @Sajaki
 
 ## requirements
-- pbWow 3.3.20 Base style
+- pbWow and Wotlk 3.3.20 Base style
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82

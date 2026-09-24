@@ -20,10 +20,6 @@ Author @Paybas, @Sajaki
 
 - updated for phpBB 3.3.16
 
-3.3.19 (30-04-2026)
-
-- updated for phpBB 3.3.16
-
 3.3.16 (22-02-2026)
 
 - fixed hardcoded assets_version in prosilver stylesheet link
