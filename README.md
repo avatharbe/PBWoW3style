@@ -8,7 +8,6 @@ Author @Paybas, @Sajaki
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
-- https://www.phpbb.com/customise/db/style/pbwow3/support
 
 ## Changes
 3.3.20 (24-09-2026)
