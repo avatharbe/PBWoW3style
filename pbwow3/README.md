@@ -11,9 +11,9 @@ Author @Paybas, @Sajaki
 
 ## Changes
 3.3.20 (24-09-2026)
-- updated for phpBB 3.3.18 prosilver — both the 3.3.17 `login_body_oauth.html` fix and the 3.3.18 `mcp_topic_postrow_post_after` event are inherited, as pbwow3 overrides neither template
+- updated for phpBB 3.3.18 prosilver — both prosilver template changes are inherited, as pbwow3 overrides neither: `login_body_oauth.html` (`oauth.REDIRECT_URL` renamed to `oauth.LOGIN_URL`, from PHPBB-17659 "Move oauth login to controllers" in 3.3.17) and the new `mcp_topic_postrow_post_after` event (PHPBB-17661 in 3.3.18)
 - fix: contact icons were broken in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar — each declared `.contact-icon { background-image: url("./images/icons/icons_contact.png"); }` without shipping that file, so the sprite returned 404
-- removed pbwow3's duplicate `icons_contact.png` (pixel-identical to prosilver's, only re-encoded) together with all four redundant `.contact-icon` overrides; every style now uses prosilver's sprite and prosilver's positions, so the 3.3.18 `.phpbb_twitter-icon` shift and any future prosilver sprite change are picked up automatically
+- removed pbwow3's duplicate `icons_contact.png` (pixel-identical to prosilver's, only re-encoded) together with all four redundant `.contact-icon` overrides; every style now uses prosilver's sprite and prosilver's positions. This matters for 3.3.18: PHPBB-17623 "switch twitter to x in profile" replaces the Twitter bird with the X logo and moves `.phpbb_twitter-icon` from `-203px` to `-202px`. Keeping the duplicate would have left these styles showing the old bird while prosilver showed X. Future prosilver sprite changes are now picked up automatically too
 - added `pointer-events: none` to `#video-background` as defence in depth against the pbwowext click-shield that made static footers unclickable (fixed upstream in pbwowext 3.3.2); placed in pbwow3/theme/extensions.css and pbwow3_heroes/theme/custom.css so both CSS chains are covered
 
 3.3.19 (30-04-2026)
