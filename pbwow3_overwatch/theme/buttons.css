@@ -97,7 +97,6 @@
 --------------------------------------------- */
 
 /* Profile & navigation icons */
-.contact-icon { background-image: url("./images/icons/icons_contact.png"); }
 
 .profile-context .user-icons a:before {
     display: none;

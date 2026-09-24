@@ -128,3 +128,17 @@
 ul.forums {
   background: transparent;
 }
+/* PBWoW extension - video background
+--------------------------------------------- */
+
+/*
+ * pbwowext makes #video-background "position: fixed" and then resets its
+ * z-index from -1 to auto for WebKit/Blink, which turns the full-viewport
+ * decorative layer into a click shield. .page-body is "position: relative"
+ * so it stacks above it, but the static #page-footer does not, leaving the
+ * copyright and ACP links unclickable. The layer is purely decorative.
+ */
+#video-background,
+#video-container {
+    pointer-events: none;
+}
