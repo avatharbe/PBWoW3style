@@ -1,13 +1,68 @@
 ## PBWoW 3 Style for phpBB 3.3.18
 
-Authors: @Paybas and @Sajaki
+PBWoW 3 is a Blizzard-themed style for phpBB 3.3. It gives a board the look of a World of Warcraft–era community site: framed posts and portrait avatars, gaming-themed headers, and optional animated video backgrounds.
+
+The style is built as a child of **prosilver**. It keeps phpBB's standard markup, template events and responsive layout, and it picks up prosilver fixes automatically.
+
+This folder holds the **base style**. Twelve themed sub-styles in this repository build on it, so PBWoW3 must be installed before any of them.
+
+- **Version:** 3.3.20 (24-09-2026)
+- **Authors:** PayBas (2015) and @Sajaki (since 2017)
+- **Live demo:** https://www.avathar.be/demoforum/app.php/guild
 
 ## Requirements
-- phpBB 3.3.18 or higher 
-- pbwowExt (optional)
+- phpBB 3.3.18 or higher
+- pbwowExt (optional; enables the extras listed below)
+
+## Features
+
+**Always on**
+
+- Blizzard-style framing for posts, the post profile, polls, the forum list and the navigation bar.
+- Collapsible forum categories and statistics blocks. Each visitor's browser remembers which blocks are open or closed.
+- Forum-list tooltips that show whether a forum has unread posts or links to another page.
+- Localised search-button graphics for Czech, German, English, Spanish, French and Russian.
+- Responsive layout for phones and small screens.
+- Styling for quick reply and the Board3 portal.
+- `theme/custom.css` for board-specific tweaks. It includes a few example post styles that you can reuse or remove.
+
+**With pbwowExt installed and enabled**
+
+- Animated video backgrounds, either on the index only or on every page. The sub-styles supply the videos.
+- Game-icon frames around avatars.
+- Small rank icons next to the avatar instead of the full rank block.
+- The member's join date in the post profile.
+
+Without pbwowExt, PBWoW3 works like a normal prosilver-based style and these extras stay off.
+
+## Sub-styles
+
+Each sub-style overrides only the header, colours, images, fonts and background video it needs, and inherits the rest from its parent:
+
+| Sub-style | Parent |
+|---|---|
+| PBWoW3 Battlecry, PBWoW3_Diablo, PBWoW3_Garrison, PBWoW3_Heroes, PBWoW3_Legion, PBWoW3_Pandaria, PBWoW3_TBC, PBWoW3_Warlords, PBWoW3 Wotlk | PBWoW3 |
+| PBWoW3_Overwatch, PBWoW3_WildStar | PBWoW3_Heroes |
+| PBWoW3 Xmas | PBWoW3 Wotlk |
+
+## Installation
+1. Copy the `pbwow3` folder into your forum's `styles` folder.
+2. To use a sub-style, also copy its folder and its parent's folder. See the table above.
+3. In the Administration Control Panel (ACP), go to **Customise → Install Styles**. Install **PBWoW3** first, then any sub-styles.
+4. Optional: install pbwowExt to enable video backgrounds, avatar frames and the other extras.
+
+### Upgrading
+1. Replace the style folders with the new versions.
+2. Purge the board cache in the ACP.
+
+Stylesheets are loaded with the style version in their URL, so browsers fetch the new CSS as soon as the version changes.
+
+## Designer resources
+The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and French versions of the quick-search graphics.
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
+- https://www.phpbb.com/customise/db/style/pbwow3/support
 
 ## Changes
 3.3.20 (24-09-2026)
@@ -94,7 +149,7 @@ Authors: @Paybas and @Sajaki
 3.2.2 (16-03-2018)
 
 - Updated for phpBB 3.2.2 (updated HTML and added template events).
-- Restored the missing ‘Mark read’ link in the navigation bar.
+- Restored the missing 'Mark read' link in the navigation bar.
 
 3.2.1.6 (15-10-2017)
 
@@ -132,7 +187,7 @@ Authors: @Paybas and @Sajaki
 3.2.0 (29-08-2017)
 
 - Updated for phpBB 3.2.0.
- 
+
 3.1.10 (15-12-2016)
 
 - Updated for phpBB 3.1.10.
@@ -161,15 +216,12 @@ Authors: @Paybas and @Sajaki
 - Added theme images for the pbWoW Core Theme.
 - Fixed avatar positioning.
 
-## Installation
-1. Copy the pbwow3 folder into your forum’s styles folder.
-2. Open the Administration Control Panel (ACP), go to Customise → Install Styles, and click Install.
-
 ## License
 
 [GNU General Public License v2](http://opensource.org/licenses/gpl-2.0.php)
 This style is open-source software released under the GPL.
-We request that you retain the copyright notice below.
+We request that you retain the copyright notice.
 
-## Credits 
+## Credits
+Created by PayBas; maintained by @Sajaki.
 Thank you to @Galixte and @shadowfox for their support.
