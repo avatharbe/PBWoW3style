@@ -2,6 +2,8 @@
 
 PBWoW 3 is a Blizzard-themed style for phpBB 3.3. It gives a board the look of a World of Warcraft–era community site: framed posts and portrait avatars, gaming-themed headers, and optional animated video backgrounds.
 
+<img width="2308" height="1538" alt="Screen Shot 2026-09-26 at 15 39 34" src="https://github.com/user-attachments/assets/761345ee-ef25-4ef6-8f03-749491a6b20b" />
+
 The style is built as a child of **prosilver**. It keeps phpBB's standard markup, template events and responsive layout, and it picks up prosilver fixes automatically.
 
 This folder holds the **base style**. Twelve themed sub-styles in this repository build on it, so PBWoW3 must be installed before any of them.
