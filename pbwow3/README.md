@@ -18,6 +18,7 @@ Authors: @Paybas and @Sajaki
 - Removed three rules from `custom.css` that pointed at images the style does not ship: the `.red` post-profile backgrounds and the `.donate-button` styling. The donate button in the Recent Topics block is styled by the pbWoW extension, which ships its own image. (#45)
 - Fixed the navigation bar writing two `class` attributes on pages without the search box. The second one was ignored, so the `no-search` styling never applied; the bar now shows its intended left corner there. (#43)
 - Fixed the contact icons in the post profile dropdown (private message, email, website, ...), which showed up blank in pbwow3. (#44)
+- Removed the empty `videobg.html` from pbwow3. The footer now includes it only when a sub-style provides one. In pbwow3_overwatch and pbwow3_wildstar the file stays, with a comment: it deliberately switches off the video they would otherwise inherit from pbwow3_heroes. (#46)
 
 3.3.21 (28-09-2026)
 
