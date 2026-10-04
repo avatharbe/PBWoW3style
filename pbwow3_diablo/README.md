@@ -16,6 +16,7 @@ Author @Paybas, @Sajaki
 
 - replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
 - removed overall_header_old.html, an unused backup copy of overall_header.html (#51)
+- the `?v=` strings on the stylesheet imports now equal the style version, so browsers fetch the new CSS after an upgrade; they were fixed `?hash=` values (#77)
 
 3.3.20 (24-09-2026)
 

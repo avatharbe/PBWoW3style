@@ -16,6 +16,7 @@ Author @Sajaki
 
 - replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
 - fixed the breadcrumb bar showing pbwow3's gold frame corners and crumb underline instead of legion's green ones: its rules targeted the old `#body-header` id (#67)
+- the stylesheet imports now carry the style version (`?v=`), so browsers fetch the new CSS after an upgrade; they had no version at all (#77)
 
 3.3.20 (24-09-2026)
 

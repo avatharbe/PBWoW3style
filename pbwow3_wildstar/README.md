@@ -18,6 +18,7 @@ Author @Paybas, @Sajaki
 - replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
 - removed empty CSS rules from extensions.css; nothing changes on screen (#40)
 - fixed the UCP and MCP side menu on right-to-left boards: a leftover rule in pbwow3_heroes's bidi.css overrode the mirrored gradient and the hover highlight (#65)
+- the `?v=` strings on the stylesheet imports now equal the style version, so browsers fetch the new CSS after an upgrade; they were fixed `?hash=` values (#77)
 
 3.3.20 (24-09-2026)
 
