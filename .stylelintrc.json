@@ -4,6 +4,7 @@
 	"rules": {
 		"annotation-no-unknown": true,
 		"at-rule-no-unknown": true,
+		"block-no-empty": true,
 		"color-no-invalid-hex": true,
 		"comment-no-empty": true,
 		"declaration-block-no-duplicate-custom-properties": true,
@@ -21,7 +22,6 @@
 		"string-no-newline": true,
 		"unit-no-unknown": true,
 
-		"block-no-empty": [true, { "severity": "warning" }],
 		"selector-type-no-unknown": [true, { "severity": "warning", "ignore": ["custom-elements"] }],
 		"declaration-block-no-duplicate-properties": [true, { "severity": "warning", "ignore": ["consecutive-duplicates-with-different-syntaxes"] }],
 		"declaration-block-no-shorthand-property-overrides": [true, { "severity": "warning" }],

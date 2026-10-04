@@ -909,9 +909,6 @@ fieldset.polls dd.resultbar div:before {
 }
 
 
-fieldset.polls dd.resultbar div:before {
-}
-
 fieldset.polls dl.most-votes dd.resultbar div {
     background-position: 100% -1px;
 	box-shadow: 0 0 5px rgba(255, 119, 253, 0.7);
@@ -936,9 +933,6 @@ fieldset.polls dl.most-votes dd.resultbar div:before {
 	margin: 15px 0 0;
 	padding: 0;
 	height: auto;
-}
-
-.topic_poll .poll-footer {
 }
 
 
