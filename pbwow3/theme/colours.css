@@ -1139,7 +1139,7 @@ Colours and backgrounds for cp.css
 	background: rgba(40, 40, 40, 0.7) linear-gradient(to left, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 100px);
 }
 
-.rtl navigation a { /* Do it here instead of bidi.css, so it's easier to overrule by children) */
+.rtl .navigation a { /* Do it here instead of bidi.css, so it's easier to overrule by children) */
 	background: rgba(40, 40, 40, 0.7) linear-gradient(to right, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 100px);
 }
 

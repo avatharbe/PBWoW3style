@@ -81,6 +81,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - Removed `overall_header_old.html` from pbwow3_diablo: an unused backup copy of `overall_header.html` that phpBB never loaded. (#51)
 - Removed 26 of the 29 `!important` declarations from `responsive.css`. Eighteen only repeated prosilver's own rules, three belonged to the long-gone reCAPTCHA v1, and the post-background overrides now use a selector that wins without them. The three that remain are commented: they override an inline style from phpBB and another `!important` in `colours.css`. Nothing changes on screen. (#49)
 - Removed an empty `.postprofile .avatar` rule from `content.css`. The seven empty rules in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar are removed in the repository too, and ship with those styles' next release. (#40)
+- Fixed the UCP and MCP side menu on right-to-left boards: its gradient now runs the mirrored way and the hover highlight works again. A selector was missing its class dot, and a leftover rule in `bidi.css` overrode both. (#39)
 
 3.3.21 (28-09-2026)
 
