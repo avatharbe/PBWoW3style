@@ -73,6 +73,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - Removed a leftover Recent Topics advertisement block from the bottom of the board index. Recent Topics renders its ad itself and limits it to the Side location; the style's copy only showed an ad in the top or bottom location, against that setting. (#36)
 - Replaced the legacy template syntax left in pbwow3 and its sub-styles (`DEFINE`, `eq`/`neq` and `{L_...}`) with Twig `set`, `==`/`!=` and `lang()`. Pages render exactly as before. (#41)
 - Removed three rules from `custom.css` that pointed at images the style does not ship: the `.red` post-profile backgrounds and the `.donate-button` styling. The donate button in the Recent Topics block is styled by the pbWoW extension, which ships its own image. (#45)
+- Fixed the navigation bar writing two `class` attributes on pages without the search box. The second one was ignored, so the `no-search` styling never applied; the bar now shows its intended left corner there. (#43)
 
 3.3.21 (28-09-2026)
 

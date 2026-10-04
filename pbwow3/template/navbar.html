@@ -1,4 +1,4 @@
-<div class="navbar"{% if not S_DISPLAY_SEARCH or S_IN_SEARCH %} class="no-search"{% endif %}>
+<div class="navbar{% if not S_DISPLAY_SEARCH or S_IN_SEARCH %} no-search{% endif %}">
 	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
 		{% set MICRODATA = ' itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope' %}
 		{% set navlink_position = 1 %}
