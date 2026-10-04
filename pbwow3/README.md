@@ -12,6 +12,7 @@ Authors: @Paybas and @Sajaki
 ## Changes
 3.3.22 (04-10-2026)
 
+- All sub-styles are released as 3.3.22 together with pbwow3 and require pbwow3 3.3.22.
 - The custom header links from the pbWoW extension are no longer printed by the style itself. pbwowext 3.3.3 renders them through a template event, so update the extension together with this style, or the links disappear. (#35)
 - Removed a leftover Recent Topics advertisement block from the bottom of the board index. Recent Topics renders its ad itself and limits it to the Side location; the style's copy only showed an ad in the top or bottom location, against that setting. (#36)
 - Replaced the legacy template syntax left in pbwow3 and its sub-styles (`DEFINE`, `eq`/`neq` and `{L_...}`) with Twig `set`, `==`/`!=` and `lang()`. Pages render exactly as before. (#41)
@@ -20,13 +21,13 @@ Authors: @Paybas and @Sajaki
 - Fixed the contact icons in the post profile dropdown (private message, email, website, ...), which showed up blank in pbwow3. (#44)
 - Removed the empty `videobg.html` from pbwow3. The footer now includes it only when a sub-style provides one. In pbwow3_overwatch and pbwow3_wildstar the file stays, with a comment: it deliberately switches off the video they would otherwise inherit from pbwow3_heroes. (#46)
 - Moved the style's JavaScript (collapsible boxes, anchor offset below the top bar, video background sizing and the mini-profile menus) from inline code in `overall_footer.html` into `template/pbwow3.js`, so browsers can cache it. Nothing changes in how it behaves. (#47)
-- The `?v=` version strings on the stylesheet imports now equal the style version (3.3.22 for pbwow3, 3.3.20 for pbwow3_heroes and pbwow3_overwatch), so browsers fetch the new CSS after an upgrade instead of keeping a cached copy. (#48)
+- The `?v=` version strings on the stylesheet imports now equal the style version in pbwow3, pbwow3_heroes and pbwow3_overwatch, so browsers fetch the new CSS after an upgrade instead of keeping a cached copy. (#48)
 - Removed `overall_header_old.html` from pbwow3_diablo: an unused backup copy of `overall_header.html` that phpBB never loaded. (#51)
 - Removed 26 of the 29 `!important` declarations from `responsive.css`. Eighteen only repeated prosilver's own rules, three belonged to the long-gone reCAPTCHA v1, and the post-background overrides now use a selector that wins without them. The three that remain are commented: they override an inline style from phpBB and another `!important` in `colours.css`. Nothing changes on screen. (#49)
-- Removed an empty `.postprofile .avatar` rule from `content.css`. The seven empty rules in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar are removed in the repository too, and ship with those styles' next release. (#40)
+- Removed an empty `.postprofile .avatar` rule from `content.css`. The seven empty rules in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar are removed too. (#40)
 - Fixed the UCP and MCP side menu on right-to-left boards: its gradient now runs the mirrored way and the hover highlight works again. A selector was missing its class dot, and a leftover rule in `bidi.css` overrode both. (#39)
-- Fixed the same right-to-left side-menu override in pbwow3_heroes's `bidi.css`, which also affected pbwow3_overwatch and pbwow3_wildstar. It is fixed in the repository and ships with those styles' next release. (#65)
-- Fixed pbwow3_legion showing pbwow3's gold frame corners and breadcrumb underline instead of its own green ones: its rules still targeted the old `#body-header` id. Fixed in the repository; ships with pbwow3_legion's next release. (#67)
+- Fixed the same right-to-left side-menu override in pbwow3_heroes's `bidi.css`, which also affected pbwow3_overwatch and pbwow3_wildstar. (#65)
+- Fixed pbwow3_legion showing pbwow3's gold frame corners and breadcrumb underline instead of its own green ones: its rules still targeted the old `#body-header` id. (#67)
 
 3.3.21 (28-09-2026)
 

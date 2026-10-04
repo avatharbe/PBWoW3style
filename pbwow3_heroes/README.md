@@ -5,12 +5,19 @@ Author @Paybas, @Sajaki
 
 ## requirements
 
-- pbWow 3.3.20 Base style
+- pbWow 3.3.22 Base style
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
 
 ## Changes
+3.3.22 (04-10-2026)
+
+- replaced the legacy template syntax in overall_header.html and viewtopic_body.html (`DEFINE`, `eq` and `{L_...}`) with Twig `set`, `==` and `lang()`; renders as before (#41)
+- removed empty CSS rules from content.css and extensions.css; nothing changes on screen (#40)
+- fixed the UCP and MCP side menu on right-to-left boards: a leftover rule in bidi.css overrode the mirrored gradient and the hover highlight (#65)
+- the `?v=` strings on the stylesheet imports now equal the style version, so browsers fetch the new CSS after an upgrade (#48)
+
 3.3.20 (24-09-2026)
 
 - updated for phpBB 3.3.18

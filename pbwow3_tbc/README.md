@@ -4,12 +4,16 @@
 Author @Sajaki
 
 ## requirements
-- pbWow 3.3.20 Base style
+- pbWow 3.3.22 Base style
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
 
 ## Changes
+3.3.22 (04-10-2026)
+
+- replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
+
 3.3.20 (24-09-2026)
 
 - updated for phpBB 3.3.18
