@@ -1,12 +1,12 @@
 /* General Markup Styles
 ---------------------------------------- */
 body {
-    background: #050a12 url("./images/bg.jpg") no-repeat 49.999% 0;
+	background: #050a12 url("./images/bg.jpg") no-repeat 49.999% 0;
 }
 
 .headerbar {
-    min-height: 210px;
-    transition-delay: unset;
-    transition-delay: inherit;
-    transition-delay: initial;
+	min-height: 210px;
+	transition-delay: unset;
+	transition-delay: inherit;
+	transition-delay: initial;
 }

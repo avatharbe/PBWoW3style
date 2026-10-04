@@ -16,129 +16,129 @@
 /* PBWoW Legion style specific assets (overall_header {T_THEME_NAME}
 --------------------------------------------- */
 body.pbwow3_legion::before{
-    background: rgba(0, 0, 0, 0) url("./images/walls.png") repeat scroll 0 0;
-    content: "";
-    left: 50%;
-    margin-left: -1280px;
-    position: fixed;
-    bottom: 600px;
-    width: 2560px;
-    height: 1000px;
-    z-index: -10;
+	background: rgba(0, 0, 0, 0) url("./images/walls.png") repeat scroll 0 0;
+	content: "";
+	left: 50%;
+	margin-left: -1280px;
+	position: fixed;
+	bottom: 600px;
+	width: 2560px;
+	height: 1000px;
+	z-index: -10;
 }
 
 body.pbwow3_legion::after{
-    background: rgba(0, 0, 0, 0) url("./images/base.fw.png") repeat scroll 0 0;
-    content: "";
-    left: 50%;
-    margin-left: -1280px;
-    position: fixed;
-    bottom: 0px;
-    width: 2560px;
-    height: 601px;
-    z-index: -20;
+	background: rgba(0, 0, 0, 0) url("./images/base.fw.png") repeat scroll 0 0;
+	content: "";
+	left: 50%;
+	margin-left: -1280px;
+	position: fixed;
+	bottom: 0px;
+	width: 2560px;
+	height: 601px;
+	z-index: -20;
 }
 
 
 /* Top-bar (only available if pbwow extension is on)
 --------------------------------------------- */
 #top-bar {
-    background: url("./images/bar-bg.jpg") no-repeat scroll 50% 100% #244107;
-    border-bottom: 1px solid #067e07;
-    box-shadow: 0 0 3px 3px #000000;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 40px;
-    color: #FFF;
-    text-shadow: 1px 1px #000000;
-    position: relative;
-    z-index: 1;
+	background: url("./images/bar-bg.jpg") no-repeat scroll 50% 100% #244107;
+	border-bottom: 1px solid #067e07;
+	box-shadow: 0 0 3px 3px #000000;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	line-height: 40px;
+	color: #FFF;
+	text-shadow: 1px 1px #000000;
+	position: relative;
+	z-index: 1;
 }
 
 #top-bar > .inner {
-    border-right: 3px solid #064507;
-    border-left: 1px solid #012302;
-    height: 40px;
-    margin: 0 auto;
-    max-width: 990px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	border-right: 3px solid #064507;
+	border-left: 1px solid #012302;
+	height: 40px;
+	margin: 0 auto;
+	max-width: 990px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #top-bar .linklist > li {
-    border-left: 2px solid #064507;
-    border-right: 1px solid #414105;
-    margin: 0;
-    padding: 0 15px;
-    font-size: inherit;
-    line-height: inherit;
+	border-left: 2px solid #064507;
+	border-right: 1px solid #414105;
+	margin: 0;
+	padding: 0 15px;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 #top-bar .linklist > li.link {
-    padding: 0;
+	padding: 0;
 }
 
 #top-bar .linklist > li.link > a {
-    padding: 0 15px !important;
-    display: block;
-    font-weight: bold;
+	padding: 0 15px !important;
+	display: block;
+	font-weight: bold;
 }
 
 #top-bar .linklist > li.link > a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    text-shadow: 0 0 7px rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.05);
+	text-shadow: 0 0 7px rgba(255, 255, 255, 0.4);
 }
 
 /* Miscellaneous styles - video
 --------------------------------------------- */
 body.pbwow3_legion #video-background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -60;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: -60;
 }
 
 body.pbwow3_legion #video-container {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    top: 0;
-    z-index: -65;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 0;
+	z-index: -65;
 }
 
 #video-container video {
-    opacity: 0;
+	opacity: 0;
 }
 
 #video-border {
-    position: absolute;
-    width: 100%;
-    z-index: -999;
+	position: absolute;
+	width: 100%;
+	z-index: -999;
 }
 
 #video-element1 {
-    background-image: none;
-    position: absolute;
-    display: none;
-    top: 300px;
-    left: 427px;
+	background-image: none;
+	position: absolute;
+	display: none;
+	top: 300px;
+	left: 427px;
 }
 
 /* =Media queries
 -------------------------------------------------------------- */
 @media screen and (max-width: 859px), only screen and (max-device-width: 859px) {
-    #logo {
-        width: 224px;
-        height: 137px;
-        margin-top: 10px;
-    }
+	#logo {
+		width: 224px;
+		height: 137px;
+		margin-top: 10px;
+	}
 }
 
 @media only screen and (max-width: 999px), only screen and (max-device-width: 999px) {
-    body {
-        /* background-image: url("./images/bg-small.jpg"); */
-    }
+	body {
+		/* background-image: url("./images/bg-small.jpg"); */
+	}
 }

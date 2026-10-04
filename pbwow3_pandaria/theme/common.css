@@ -1,14 +1,14 @@
 /* General Markup Styles
 ---------------------------------------- */
 body {
-    background: #020b10 url("./images/bg.jpg") no-repeat 49.999% -110px;
+	background: #020b10 url("./images/bg.jpg") no-repeat 49.999% -110px;
 }
 
 .headerbar {
-    min-height: 300px;
+	min-height: 300px;
 }
 
 /* extension loads last so we have to override it */
 body.topbar {
-    background-position: 49.999% -69px !important;
+	background-position: 49.999% -69px !important;
 }

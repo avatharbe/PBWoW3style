@@ -76,7 +76,7 @@
 {% EVENT viewtopic_body_poll_before %}
 
 {% if S_HAS_POLL %}
-    <form method="post" action="{{ S_POLL_ACTION }}" data-ajax="vote_poll" data-refresh="true" class="topic_poll">
+	<form method="post" action="{{ S_POLL_ACTION }}" data-ajax="vote_poll" data-refresh="true" class="topic_poll">
 
 	<div class="panel">
 		<div class="inner">
@@ -202,9 +202,9 @@
 									<div>
 								{% endif %}
 									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if S_LAST_CELL %} class="last-cell"{% endif %}{% if contact.ID == 'jabber' %} onclick="popup(this.href, 750, 320); return false;"{% endif %}>
-                                        {% EVENT viewtopic_body_contact_icon_prepend %}
-                                        <span class="contact-icon {{ contact.ID }}-icon">{{ contact.NAME }}</span>
-                                        {% EVENT viewtopic_body_contact_icon_append %}
+										{% EVENT viewtopic_body_contact_icon_prepend %}
+										<span class="contact-icon {{ contact.ID }}-icon">{{ contact.NAME }}</span>
+										{% EVENT viewtopic_body_contact_icon_append %}
 									</a>
 								{% if REMAINDER == 3 or contact.S_LAST_ROW %}
 									</div>
@@ -270,11 +270,11 @@
 
 			{% EVENT viewtopic_body_post_subject_before %}
 			<h3 {% if postrow.S_FIRST_ROW %}class="first"{% endif %}>
-                {% if postrow.POST_ICON_IMG %}
-                <img src="{{ T_ICONS_PATH }}{{ postrow.POST_ICON_IMG }}" width="{{ postrow.POST_ICON_IMG_WIDTH }}" height="{{ postrow.POST_ICON_IMG_HEIGHT }}" alt="{{ postrow.POST_ICON_IMG_ALT }}" title="{{ postrow.POST_ICON_IMG_ALT }}" />
-                {% endif %}
-                <a {% if postrow.S_FIRST_UNREAD %}class="first-unread" {% endif %}href="{{ postrow.U_MINI_POST }}">{{ postrow.POST_SUBJECT }}</a>
-            </h3>
+				{% if postrow.POST_ICON_IMG %}
+				<img src="{{ T_ICONS_PATH }}{{ postrow.POST_ICON_IMG }}" width="{{ postrow.POST_ICON_IMG_WIDTH }}" height="{{ postrow.POST_ICON_IMG_HEIGHT }}" alt="{{ postrow.POST_ICON_IMG_ALT }}" title="{{ postrow.POST_ICON_IMG_ALT }}" />
+				{% endif %}
+				<a {% if postrow.S_FIRST_UNREAD %}class="first-unread" {% endif %}href="{{ postrow.U_MINI_POST }}">{{ postrow.POST_SUBJECT }}</a>
+			</h3>
 
 		{% set SHOW_POST_BUTTONS = (postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE) %}
 		{% EVENT viewtopic_body_post_buttons_list_before %}

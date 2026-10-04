@@ -3,10 +3,10 @@
 /* General form styles
 ----------------------------------------*/
 select {
-    background-repeat: no-repeat;
-    background-position: 100% center;
-    -webkit-appearance: none; /* Removes default chrome and safari style */
-    -moz-appearance: none; /* Removes Default Firefox style */
+	background-repeat: no-repeat;
+	background-position: 100% center;
+	-webkit-appearance: none; /* Removes default chrome and safari style */
+	-moz-appearance: none; /* Removes Default Firefox style */
 }
 
 /* Definition list layout for forms
@@ -14,26 +14,26 @@ select {
 fieldset.display-options.right-box { text-align: right; }
 
 fieldset.submit-buttons input {
-    padding: 4px 6px;
+	padding: 4px 6px;
 }
 
 /* Sort & Display options */
 .dropdown fieldset.display-options {
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
 }
 
 .dropdown fieldset.display-options label {
-    display: block;
-    margin: 4px;
-    padding: 0;
-    text-align: right;
-    white-space: nowrap;
+	display: block;
+	margin: 4px;
+	padding: 0;
+	text-align: right;
+	white-space: nowrap;
 }
 
 .dropdown fieldset.display-options select {
-    min-width: 120px;
+	min-width: 120px;
 }
 
 /* Posting page styles
@@ -43,8 +43,8 @@ fieldset.submit-buttons input {
 ---------------------------------------- */
 
 input.disabled {
-    font-weight: normal;
-    color: #999;
+	font-weight: normal;
+	color: #999;
 }
 
 /* Form button styles
@@ -53,40 +53,40 @@ input.disabled {
 /* Form buttons */
 a.button1, input.button1,
 a.button2, input.button2, input.button3 {
-    padding: 2px 3px;
-    border: 1px solid #666;
-    border-radius: 2px;
-    width: auto !important;
-    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-    min-width: 20px;
-    line-height: 1.5;
-    margin-top: 4px;
+	padding: 2px 3px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	width: auto !important;
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	min-width: 20px;
+	line-height: 1.5;
+	margin-top: 4px;
 }
 
 a.button1, a.button1:active,
 a.button2, a.button2:active {
-    text-decoration: none;
-    color: #DDD;
-    padding: 2px 8px;
-    line-height: 250%;
-    vertical-align: text-bottom;
+	text-decoration: none;
+	color: #DDD;
+	padding: 2px 8px;
+	line-height: 250%;
+	vertical-align: text-bottom;
 }
 
 .button1.disabled {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 #login .button1,
 #quick-login-panel .button1 {
-    padding: 5px 14px;
+	padding: 5px 14px;
 }
 
 /* Browser-specific tweaks */
 input.button1::-moz-focus-inner,
 input.button2::-moz-focus-inner,
 input.button3::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+	padding: 0;
+	border: 0;
 }
 
 /* <a> button in the style of the form buttons */
@@ -101,159 +101,159 @@ input.button3::-moz-focus-inner {
 --------------------------------------------- */
 .search-box .inputbox,
 .search-box button.search-icon {
-    height: auto;
-    padding: 0 3px;
-    margin: 0;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	height: auto;
+	padding: 0 3px;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .search-box .inputbox {
-    background-image: none;
-    border-right-width: 0;
-    border-radius: 0px;
-    float: left;
-    padding: 3px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    line-height: 28px;
-    height: 30px;
+	background-image: none;
+	border-right-width: 0;
+	border-radius: 0px;
+	float: left;
+	padding: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 28px;
+	height: 30px;
 }
 
 .search.post > .inner {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
 }
 
 .search .postprofile {
-    background: none !important;
-    flex: 0 0 23.5%;
-    padding: 5px;
-    min-height: inherit;
-    text-align: left;
-    box-sizing: border-box;
-    float: none;
+	background: none !important;
+	flex: 0 0 23.5%;
+	padding: 5px;
+	min-height: inherit;
+	text-align: left;
+	box-sizing: border-box;
+	float: none;
 }
 
 .search .postbody {
-    flex: 1 1 auto;
-    box-sizing: border-box;
-    float: none;
+	flex: 1 1 auto;
+	box-sizing: border-box;
+	float: none;
 }
 
 .search.post > .inner > ul.searchresults {
-    flex: 1 0 100%;
-    order: 99;
+	flex: 1 0 100%;
+	order: 99;
 }
 
 .search .postprofile dt {
-    background: none !important;
-    min-height: inherit;
-    padding-top: 0;
+	background: none !important;
+	min-height: inherit;
+	padding-top: 0;
 }
 
 body.section-search p:not(.jumpbox-return) a.arrow-left,
 body.section-search p:not(.jumpbox-return) a.arrow-right {
-    display: none;
+	display: none;
 }
 
 
 .search-box button.search-icon,
 .search-box a.button {
-    padding: 0 7px;
+	padding: 0 7px;
 }
 
 input[type=checkbox][disabled] {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    select {
-        padding-right: 10px;
-    }
+	select {
+		padding-right: 10px;
+	}
 }
 
 #format-buttons { margin: 15px 0 5px 0; }
 
 input.search {
-    background-image: none;
-    padding: 2px;
+	background-image: none;
+	padding: 2px;
 }
 
 /* Search box (header)
 --------------------------------------------- */
 .search-header {
-    background: url("./images/forumliner-top-left.gif") no-repeat 0 0;
-    border-radius: 0;
-    position: absolute;
-    float: none;
-    height: 39px;
-    width: 355px;
-    bottom: 0;
-    left: 12px;
-    text-align: left;
-    margin: 0;
+	background: url("./images/forumliner-top-left.gif") no-repeat 0 0;
+	border-radius: 0;
+	position: absolute;
+	float: none;
+	height: 39px;
+	width: 355px;
+	bottom: 0;
+	left: 12px;
+	text-align: left;
+	margin: 0;
 }
 
 .search-header:before {
-    content: "";
-    display: block;
-    position: absolute;
-    background: url("./en/forum-menu-quicksearch.gif") no-repeat 0 0;
-    width: 85px;
-    height: 17px;
-    left: 6px;
-    top: -6px;
+	content: "";
+	display: block;
+	position: absolute;
+	background: url("./en/forum-menu-quicksearch.gif") no-repeat 0 0;
+	width: 85px;
+	height: 17px;
+	left: 6px;
+	top: -6px;
 }
 
 .search-header a.button {
-    background: url("./en/forum-menu-advanced-search.gif") no-repeat 0 0;
-    border: none;
-    height: 17px;
-    width: 107px;
-    padding: 0;
-    position: absolute;
-    left: 94px;
-    top: -6px;
-    font-size: 0;
-    box-shadow: none;
-    transition: none;
+	background: url("./en/forum-menu-advanced-search.gif") no-repeat 0 0;
+	border: none;
+	height: 17px;
+	width: 107px;
+	padding: 0;
+	position: absolute;
+	left: 94px;
+	top: -6px;
+	font-size: 0;
+	box-shadow: none;
+	transition: none;
 }
 
 .search-header a.button:hover {
-    background-position: 0 100%;
+	background-position: 0 100%;
 }
 
 .search-header button.search-icon {
-    background: url("./en/forum-menu-search.gif") no-repeat;
-    height: 39px;
-    width: 74px !important; /* TODO necessary !important? */
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    font-size: 0;
-    box-shadow: none;
+	background: url("./en/forum-menu-search.gif") no-repeat;
+	height: 39px;
+	width: 74px !important; /* TODO necessary !important? */
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	font-size: 0;
+	box-shadow: none;
 }
 
 .search-header button.search-icon:after,
 .search-header a.button:after {
-    display: none;
+	display: none;
 }
 
 .search-header input {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .search-header .inputbox {
-    margin: 11px 3px 0 12px;
-    padding: 2px;
-    width: 182px;
-    height: 21px;
-    line-height: 15px;
-    border-radius: 2px;
+	margin: 11px 3px 0 12px;
+	padding: 2px;
+	width: 182px;
+	height: 21px;
+	line-height: 15px;
+	border-radius: 2px;
 }
 
 

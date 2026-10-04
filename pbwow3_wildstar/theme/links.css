@@ -5,60 +5,60 @@
 --------------------------------------------- */
 /* latin-ext */
 @font-face {
-  font-family: 'Jockey One';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Jockey One'), local('JockeyOne-Regular'), url(https://fonts.gstatic.com/s/jockeyone/v9/HTxpL2g2KjCFj4x8WI6AnI_xHKGn8xbL3g.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	font-family: 'Jockey One';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Jockey One'), local('JockeyOne-Regular'), url(https://fonts.gstatic.com/s/jockeyone/v9/HTxpL2g2KjCFj4x8WI6AnI_xHKGn8xbL3g.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Jockey One';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Jockey One'), local('JockeyOne-Regular'), url(https://fonts.gstatic.com/s/jockeyone/v9/HTxpL2g2KjCFj4x8WI6AnIHxHKGn8xY.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: 'Jockey One';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Jockey One'), local('JockeyOne-Regular'), url(https://fonts.gstatic.com/s/jockeyone/v9/HTxpL2g2KjCFj4x8WI6AnIHxHKGn8xY.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Headings */
 h2,
 {
-    font-family: "Jockey One","Myriad Pro",Myriad,Arial,sans-serif;
-    text-shadow: 0 0 16px #009CFF;
+	font-family: "Jockey One","Myriad Pro",Myriad,Arial,sans-serif;
+	text-shadow: 0 0 16px #009CFF;
 }
 
 /* links */
 
 #top-bar .linklist > li {
-  border: none;
+	border: none;
 }
 
 #top-bar strong {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 a.up, a.down, a.left, a.right, a.top, a.top2,
 a.arrow-up, a.arrow-down, a.arrow-left, a.arrow-right {
-    text-indent: 0;
+	text-indent: 0;
 }
 
 a.up:hover, a.down:hover, a.left:hover, a.right:hover, a.top:hover, a.top2:hover,
 a.arrow-up:hover, a.arrow-down:hover, a.arrow-left:hover, a.arrow-right:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a.up:before, a.down:after, a.left:before, a.right:after, a.top:before, a.top2:before,
 a.arrow-up:before, a.arrow-down:after, a.arrow-left:before, a.arrow-right:after {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: inherit;
-    line-height: 0;
-    text-decoration: none;
-    padding-right: 3px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	font-size: inherit;
+	line-height: 0;
+	text-decoration: none;
+	padding-right: 3px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a.up:before, a.arrow-up:before		{ content: "\f077"; }
@@ -69,59 +69,59 @@ a.right:after, a.arrow-right:after	{ content: "\f054"; padding-right: 0; padding
 a.top:before { content: "\f077"; }
 a.top2:before { content: "\f077"; }
 a.top2 {
-    font-size: 10px;
-    padding-left: 0;
+	font-size: 10px;
+	padding-left: 0;
 }
 
 /* Arrow links  */
 a.arrow-up, a.arrow-down, a.arrow-left, a.arrow-right {
-    padding: 0 3px !important;
+	padding: 0 3px !important;
 }
 
 .jumpbox-return a.arrow-up::before, .jumpbox-return a.arrow-down::after,
 .jumpbox-return a.arrow-left::before, .jumpbox-return a.arrow-right::after {
-    font-size: 0.7em;
-    vertical-align: middle;
+	font-size: 0.7em;
+	vertical-align: middle;
 }
 
 .jumpbox-return a.arrow-up, .jumpbox-return a.arrow-down,
 .jumpbox-return a.arrow-left, .jumpbox-return a.arrow-right {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 
 /* Post body links */
 .postlink {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
 }
 
 .postlink:hover {
-    background: none;
-    text-decoration: none;
+	background: none;
+	text-decoration: none;
 }
 
 /* Profile links */
 .postprofile a:hover, .postprofile dt.author a:hover, .search .postprofile a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /* Back to top of page */
 .back2top {
-    clear: both;
-    text-align: right;
+	clear: both;
+	text-align: right;
 }
 
 .back2top .top {
-    float: right;
-    padding-right: 11px;
-    margin-right: -10px;
-    margin-top: 0;
+	float: right;
+	padding-right: 11px;
+	margin-right: -10px;
+	margin-top: 0;
 }
 
 .icon-mark:before {
-    content: "\f046";
+	content: "\f046";
 }
 .icon-mark-read > a:before {
-    content: "\f046";
+	content: "\f046";
 }

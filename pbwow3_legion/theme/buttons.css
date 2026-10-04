@@ -5,21 +5,21 @@
 .dropdown-visible .dropdown-select,
 .dropdown-visible .dropdown-select:hover,
 .nojs .dropdown-container:hover .dropdown-select {
-    background-color: #137318;
-    background-image: linear-gradient(to bottom, #1fc209 0%, #35971d 50%, #317f21 51%, #125d15 100%);
-    border-color: #06cb0b;
-    text-shadow: 0 0 4px rgba(255,255,255,0.5);
-    box-shadow: 0 1px 7px 0 rgba(0,0,0,0.5), inset 0 1px 3px 0 rgba(4, 255, 25, 0.3);
-    color: #FFF !important;
+	background-color: #137318;
+	background-image: linear-gradient(to bottom, #1fc209 0%, #35971d 50%, #317f21 51%, #125d15 100%);
+	border-color: #06cb0b;
+	text-shadow: 0 0 4px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 7px 0 rgba(0,0,0,0.5), inset 0 1px 3px 0 rgba(4, 255, 25, 0.3);
+	color: #FFF !important;
 }
 
 .dropdown-select:hover:after,
 .dropdown-visible .dropdown-select:after,
 .nojs .dropdown-container:hover .dropdown-select:after {
-    border-color: #1ca120;
+	border-color: #1ca120;
 }
 
 .inputbox:hover, .inputbox:focus {
-    border-color: #05cb09;
+	border-color: #05cb09;
 }
 

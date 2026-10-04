@@ -2,60 +2,60 @@
 --------------------------------------------- */
 
 #qr_postform > .panel {
-  background: url("./images/post-out-top.gif") 50% 0 no-repeat,
-  url("./images/post-out-bot.gif") 50% 100% no-repeat,
-  url("./images/post-out-sides.gif") 50% 8px repeat-y,
-  url("./images/post-main-bg.jpg") 50% 6px no-repeat #1b1b1b;
-  max-width: 757px;
-  margin: -3px auto 10px;
-  padding: 25px 30px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
-  border: none;
+	background: url("./images/post-out-top.gif") 50% 0 no-repeat,
+		url("./images/post-out-bot.gif") 50% 100% no-repeat,
+		url("./images/post-out-sides.gif") 50% 8px repeat-y,
+		url("./images/post-main-bg.jpg") 50% 6px no-repeat #1b1b1b;
+	max-width: 757px;
+	margin: -3px auto 10px;
+	padding: 25px 30px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
+	border: none;
 }
 
 #qr_postform > .panel > .inner {
-  max-width: 643px;
-  margin: 0 auto;
+	max-width: 643px;
+	margin: 0 auto;
 }
 
 #qr_postform #message-box {
-  background: url("./images/post-message-box-bot.gif") 0 100% / 100% auto no-repeat,
-  url("./images/post-message-box-top.gif") 0 0 / 100% auto no-repeat,
-  url("./images/post-message-box-sides.gif") 0 0 / 100% auto repeat-y;
-  padding: 15px 14px 27px 15px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 0;
+	background: url("./images/post-message-box-bot.gif") 0 100% / 100% auto no-repeat,
+		url("./images/post-message-box-top.gif") 0 0 / 100% auto no-repeat,
+		url("./images/post-message-box-sides.gif") 0 0 / 100% auto repeat-y;
+	padding: 15px 14px 27px 15px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 0;
 }
 
 #qr_postform textarea {
-  background: #0D1A2D;
-  background: #0D1A2D linear-gradient(to bottom, rgba(8, 17, 38, 1) 0, rgba(13, 26, 45, 0) 32px);
-  margin: 0;
-  padding: 2px;
-  border-radius: 5px;
-  transition: box-shadow 0.25s ease-in-out 0s;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	background: #0D1A2D;
+	background: #0D1A2D linear-gradient(to bottom, rgba(8, 17, 38, 1) 0, rgba(13, 26, 45, 0) 32px);
+	margin: 0;
+	padding: 2px;
+	border-radius: 5px;
+	transition: box-shadow 0.25s ease-in-out 0s;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #qr_postform textarea:focus {
-  box-shadow: 0 0 3px 1px #11A3EA;
+	box-shadow: 0 0 3px 1px #11A3EA;
 }
 
 #qr_postform fieldset.submit-buttons {
-  background: url("./images/post-util-bot.gif") 0 100% / 100% auto no-repeat,
-  url("./images/post-util-top.gif") 0 0 / 100% auto no-repeat,
-  url("./images/post-util-sides.gif") 0 0 / 100% 100% repeat-y;
-  position: relative;
-  margin: 0;
-  padding: 14px 10px;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	background: url("./images/post-util-bot.gif") 0 100% / 100% auto no-repeat,
+		url("./images/post-util-top.gif") 0 0 / 100% auto no-repeat,
+		url("./images/post-util-sides.gif") 0 0 / 100% 100% repeat-y;
+	position: relative;
+	margin: 0;
+	padding: 14px 10px;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
@@ -65,34 +65,34 @@
 
 .collapse-box h2,
 .stat-block h3 {
-  font-size: 20px;
-  line-height: 30px;
-  margin: 10px 2px 0;
-  padding: 0 0 0 8px;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-  border-bottom: 1px solid #444;
-  color: #888;
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  transition: border-bottom 0.20s ease-in-out 0s;
+	font-size: 20px;
+	line-height: 30px;
+	margin: 10px 2px 0;
+	padding: 0 0 0 8px;
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	border-bottom: 1px solid #444;
+	color: #888;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	transition: border-bottom 0.20s ease-in-out 0s;
 }
 
 .collapse-box h2:hover,
 .stat-block h3:hover {
-  border-bottom-color: #CCC;
+	border-bottom-color: #CCC;
 }
 
 .collapse-box h2.open,
 .stat-block h3.open {
-  border-bottom-color: transparent;
+	border-bottom-color: transparent;
 }
 
 .collapse-box h2 a,
 .stat-block h3 a {
-  display: block;
-  transition: color 0.20s ease-in-out 0s;
-  color: #888;
+	display: block;
+	transition: color 0.20s ease-in-out 0s;
+	color: #888;
 }
 
 .collapse-box h2 a:hover,
@@ -103,30 +103,30 @@
 
 .collapse-box h2 a[href="#"]:before,
 .stat-block h3 a[href="#"]:before {
-  content: "\f196";
-  display: inline-block;
-  margin-right: 8px;
-  font-family: FontAwesome;
-  font-size: 0.9em;
-  font-weight: normal;
-  opacity: 0.6;
+	content: "\f196";
+	display: inline-block;
+	margin-right: 8px;
+	font-family: FontAwesome;
+	font-size: 0.9em;
+	font-weight: normal;
+	opacity: 0.6;
 }
 
 .collapse-box h2.open a[href="#"]:before,
 .stat-block h3.open a[href="#"]:before {
-  content: "\f147";
+	content: "\f147";
 }
 
 .stat-block h3 {
-  font-size: 16px;
-  line-height: 24px;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 
 /* Board3
 --------------------------------------------- */
 ul.forums {
-  background: transparent;
+	background: transparent;
 }
 /* PBWoW extension - video background
 --------------------------------------------- */
@@ -140,5 +140,5 @@ ul.forums {
  */
 #video-background,
 #video-container {
-    pointer-events: none;
+	pointer-events: none;
 }

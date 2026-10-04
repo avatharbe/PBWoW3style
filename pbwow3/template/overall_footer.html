@@ -66,15 +66,15 @@
 {% INCLUDEJS 'ajax.js' %}
 {% if S_ALLOW_CDN %}
 <script>
-    (function($){
-        var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
-                $span = $('<span class="fa" style="display:none"></span>').appendTo('body');
-        if ($span.css('fontFamily') !== 'FontAwesome' ) {
-            $fa_cdn.after('<link href="{{ T_ASSETS_PATH }}/css/font-awesome.min.css" rel="stylesheet">');
-            $fa_cdn.remove();
-        }
-        $span.remove();
-    })(jQuery);
+	(function($){
+		var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
+		if ($span.css('fontFamily') !== 'FontAwesome' ) {
+			$fa_cdn.after('<link href="{{ T_ASSETS_PATH }}/css/font-awesome.min.css" rel="stylesheet">');
+			$fa_cdn.remove();
+		}
+		$span.remove();
+	})(jQuery);
 </script>
 {% endif %}
 {% INCLUDEJS 'jquery.collapse.js' %}

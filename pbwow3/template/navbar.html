@@ -6,32 +6,32 @@
 		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
 			{% if U_SITE_HOME %}
 			    <span class="crumb" {{ MICRODATA }}>
-                    <a href="{{ U_SITE_HOME }}" itemprop="item" data-navbar-reference="home">
-                        <i class="icon fa-home fa-fw" aria-hidden="true"></i>
-                        <span itemprop="name">{{ lang('SITE_HOME') }}</span>
-                    </a>
-                    <meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
-                </span>
+					<a href="{{ U_SITE_HOME }}" itemprop="item" data-navbar-reference="home">
+						<i class="icon fa-home fa-fw" aria-hidden="true"></i>
+						<span itemprop="name">{{ lang('SITE_HOME') }}</span>
+					</a>
+					<meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
+				</span>
 			{% endif %}
 			{% EVENT overall_header_breadcrumb_prepend %}
 			<span class="crumb" {{ MICRODATA }}>
-                <a href="{{ U_INDEX }}" itemprop="item" accesskey="h" data-navbar-reference="index">
-                    {% if not U_SITE_HOME %}
-                    <i class="icon fa-home fa-fw"></i>
-                    {% endif %}
-                    <span itemprop="name">{{ lang('INDEX') }}</span>
-                </a>
-                <meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
-            </span>
+				<a href="{{ U_INDEX }}" itemprop="item" accesskey="h" data-navbar-reference="index">
+					{% if not U_SITE_HOME %}
+					<i class="icon fa-home fa-fw"></i>
+					{% endif %}
+					<span itemprop="name">{{ lang('INDEX') }}</span>
+				</a>
+				<meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
+			</span>
 			{% for navlinks in loops.navlinks %}
-                {% EVENT overall_header_navlink_prepend %}
-                {% set NAVLINK_NAME = navlinks.BREADCRUMB_NAME | default(navlinks.FORUM_NAME) %}
-                {% set NAVLINK_LINK = navlinks.U_BREADCRUMB | default(navlinks.U_VIEW_FORUM) %}
-                <span class="crumb" {{ MICRODATA }}{% if navlinks.MICRODATA %} {{ navlinks.MICRODATA }}{% endif %}>
-                    <a href="{{ NAVLINK_LINK }}" itemprop="item"><span itemprop="name">{{ NAVLINK_NAME }}</span></a>
-                    <meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
-                </span>
-                {% EVENT overall_header_navlink_append %}
+				{% EVENT overall_header_navlink_prepend %}
+				{% set NAVLINK_NAME = navlinks.BREADCRUMB_NAME | default(navlinks.FORUM_NAME) %}
+				{% set NAVLINK_LINK = navlinks.U_BREADCRUMB | default(navlinks.U_VIEW_FORUM) %}
+				<span class="crumb" {{ MICRODATA }}{% if navlinks.MICRODATA %} {{ navlinks.MICRODATA }}{% endif %}>
+					<a href="{{ NAVLINK_LINK }}" itemprop="item"><span itemprop="name">{{ NAVLINK_NAME }}</span></a>
+					<meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
+				</span>
+				{% EVENT overall_header_navlink_append %}
 			{% endfor %}
 			{% if S_VIEWTOPIC %}<span class="crumb crumb-topic"><a href="{{ U_VIEW_TOPIC }}">{{ TOPIC_TITLE }}</a></span>{% endif %}
 			{% EVENT overall_header_breadcrumb_append %}

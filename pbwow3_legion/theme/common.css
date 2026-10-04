@@ -2,55 +2,55 @@
 --------------------------------------------- */
 
 body {
-    /* choose either one of these backgrounds */
-    background: #111;
-    background: #000 url("./images/illidan.jpg") no-repeat 49.999% 0;
-    /* background: #000 url("./images/backgreen.jpg") repeat-y 49.999% 0; */
-    background: #000 url("./images/towers.jpg") no-repeat fixed 49.999% 50%;
+	/* choose either one of these backgrounds */
+	background: #111;
+	background: #000 url("./images/illidan.jpg") no-repeat 49.999% 0;
+	/* background: #000 url("./images/backgreen.jpg") repeat-y 49.999% 0; */
+	background: #000 url("./images/towers.jpg") no-repeat fixed 49.999% 50%;
 }
 
 #wrap {
-    border: none;
-    border-radius: 0;
-    margin: 0 auto;
-    max-width: 990px;
-    padding: 0;
+	border: none;
+	border-radius: 0;
+	margin: 0 auto;
+	max-width: 990px;
+	padding: 0;
 }
 
 #page-body {
-    background: #000;
-    background: url("./images/border-bot-left.gif") no-repeat 0 100%,
-    url("./images/border-bot-right.gif") no-repeat 100% 100%,
-    url("./images/border-top-right.gif") no-repeat 100% 0,
-    url("./images/border-top-left.gif") no-repeat 0 0,
-    url("./images/border-bot.gif") repeat-x 0 100%,
-    url("./images/border-top.gif") repeat-x 0 0,
-    url("./images/border-right.gif") repeat-y 100% 0,
-    url("./images/border-left.gif") repeat-y 0 0,
-    rgba(0,0,0,0.85);
+	background: #000;
+	background: url("./images/border-bot-left.gif") no-repeat 0 100%,
+		url("./images/border-bot-right.gif") no-repeat 100% 100%,
+		url("./images/border-top-right.gif") no-repeat 100% 0,
+		url("./images/border-top-left.gif") no-repeat 0 0,
+		url("./images/border-bot.gif") repeat-x 0 100%,
+		url("./images/border-top.gif") repeat-x 0 0,
+		url("./images/border-right.gif") repeat-y 100% 0,
+		url("./images/border-left.gif") repeat-y 0 0,
+		rgba(0,0,0,0.85);
 }
 
 .headerbar {
-    background: url("./images/forumliner-top.png") repeat-x 0 100%;
-    min-height: 233px;
+	background: url("./images/forumliner-top.png") repeat-x 0 100%;
+	min-height: 233px;
 }
 
 #logo {
-    background: url("./images/logo.png") no-repeat 70% 0;
-    width: 330px;
-    height: 180px;
-    background-size: contain;
+	background: url("./images/logo.png") no-repeat 70% 0;
+	width: 330px;
+	height: 180px;
+	background-size: contain;
 }
 
 
 /* Common
 --------------------------------------------- */
 @font-face {
-    font-family: "MetallophileSp8-Light";
-    src:url("fonts/MetallophileSp8-Light.eot?#iefix") format("embedded-opentype"),
-    url("fonts/MetallophileSp8-Light.woff") format("woff"),
-    url("fonts/MetallophileSp8-Light.ttf") format("truetype");
-    /*url("fonts/MetallophileSp8-Light.svg#MetallophileSp8-Light") format("svg")*/;
+	font-family: "MetallophileSp8-Light";
+	src:url("fonts/MetallophileSp8-Light.eot?#iefix") format("embedded-opentype"),
+		url("fonts/MetallophileSp8-Light.woff") format("woff"),
+		url("fonts/MetallophileSp8-Light.ttf") format("truetype");
+	/*url("fonts/MetallophileSp8-Light.svg#MetallophileSp8-Light") format("svg")*/;
 }
 
 /**
@@ -76,38 +76,38 @@ url("fonts/LifeCraft.otf") format("opentype");
 /* Header box
 --------------------------------------------- */
 .navblock {
-    background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.75);
 }
 
 /* Breadcrumbs & Navlinks
 -------------------------------------- */
 #body-header {
-    background: url("./images/grey-bar-wide.gif") repeat-x;
-    background-size: auto 100%;
-    min-height: 35px;
-    position: relative;
+	background: url("./images/grey-bar-wide.gif") repeat-x;
+	background-size: auto 100%;
+	min-height: 35px;
+	position: relative;
 }
 
 #body-header::before {
-    background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-left1.gif") no-repeat scroll 0 0;
-    left: 0;
+	background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-left1.gif") no-repeat scroll 0 0;
+	left: 0;
 }
 
 #body-header::after {
-    background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-right2.gif") no-repeat scroll 0 0;
-    right: 0;
+	background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-right2.gif") no-repeat scroll 0 0;
+	right: 0;
 }
 
 #body-header.no-search:before {
-    background-image: url("./images/forumliner-fix-left2.gif");
+	background-image: url("./images/forumliner-fix-left2.gif");
 }
 
 #body-header .crumb a:before {
-    border-bottom: 1px dotted #234719;
+	border-bottom: 1px dotted #234719;
 }
 
 #body-header .crumb a:hover:before {
-    border-bottom-color: #13FF29;
+	border-bottom-color: #13FF29;
 }
 
 /* Index & forum lists
@@ -116,24 +116,24 @@ url("fonts/LifeCraft.otf") format("opentype");
 .forum-blocks dd.redirect,
 .forum-blocks dd.mcp-status,
 #recent-topics dd.lastpost {
-    color: #4b6a45;
+	color: #4b6a45;
 }
 
 .forum-blocks dl  {
-    border-color: #282728;
+	border-color: #282728;
 }
 
 .forum-blocks dl:hover  {
-    border-color: #137318;
+	border-color: #137318;
 }
 
 /* Topic lists
 --------------------------------------------- */
 ul.topiclist a.topictitle {
-    font-family: "MetallophileSp8-Light", "Palatino Linotype", Times, serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
+	font-family: "MetallophileSp8-Light", "Palatino Linotype", Times, serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 /* Tables
@@ -145,28 +145,28 @@ ul.topiclist a.topictitle {
 /* Pagination
 --------------------------------------------- */
 .pagination li a, .pagination li span {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 .pagination li.active span {
-    background-color: #0F1113;
-    border-color: #64ad54;
+	background-color: #0F1113;
+	border-color: #64ad54;
 }
 .pagination li.active span:hover {
-    background-color: #7fad6d;
-    border-color: #6cad87;
+	background-color: #7fad6d;
+	border-color: #6cad87;
 }
 
 .pagination li a {
-    background-color: #0F1113;
-    border-color: #5f6670;
-    color: #69ad82;
+	background-color: #0F1113;
+	border-color: #5f6670;
+	color: #69ad82;
 }
 .pagination li a:hover,
 .pagination .active a:hover,
 .pagination .dropdown-visible a.dropdown-trigger,
 .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
-    box-shadow: 0 0 3px 1px rgba(0,192,255,0.7);
-    color: #FFF;
+	box-shadow: 0 0 3px 1px rgba(0,192,255,0.7);
+	color: #FFF;
 }
 
