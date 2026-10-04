@@ -5,7 +5,7 @@
 	Original author:	PayBas
     --------------------------------------------------------------
 */
-@import url("common.css?hash=a9741ba1");
+@import url("common.css?v=3.3.22");
 
 body.pbwow3 #logo, body.pbwow3 .logo {
 	background: url("./images/logo.png") no-repeat 50% 0;

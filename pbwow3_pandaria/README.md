@@ -14,6 +14,7 @@ Author @Sajaki
 3.3.22 (04-10-2026)
 
 - replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
+- the `?v=` strings on the stylesheet imports now equal the style version, so browsers fetch the new CSS after an upgrade; they were fixed `?hash=` values (#77)
 
 3.3.20 (24-09-2026)
 
