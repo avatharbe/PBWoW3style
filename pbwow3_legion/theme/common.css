@@ -81,32 +81,32 @@ url("fonts/LifeCraft.otf") format("opentype");
 
 /* Breadcrumbs & Navlinks
 -------------------------------------- */
-#body-header {
+.navbar {
 	background: url("./images/grey-bar-wide.gif") repeat-x;
 	background-size: auto 100%;
 	min-height: 35px;
 	position: relative;
 }
 
-#body-header::before {
+.navbar:before {
 	background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-left1.gif") no-repeat scroll 0 0;
 	left: 0;
 }
 
-#body-header::after {
+.navbar:after {
 	background: rgba(0, 0, 0, 0) url("./images/forumliner-fix-right2.gif") no-repeat scroll 0 0;
 	right: 0;
 }
 
-#body-header.no-search:before {
+.navbar.no-search:before {
 	background-image: url("./images/forumliner-fix-left2.gif");
 }
 
-#body-header .crumb a:before {
+.navbar .crumb a:before {
 	border-bottom: 1px dotted #234719;
 }
 
-#body-header .crumb a:hover:before {
+.navbar .crumb a:hover:before {
 	border-bottom-color: #13FF29;
 }
 
