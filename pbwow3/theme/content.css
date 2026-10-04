@@ -1041,9 +1041,6 @@ fieldset.polls dl.most-votes dd.resultbar div:before {
 }
 
 .postprofile .avatar {
-}
-
-.postprofile .avatar {
 	max-width: 100%;
     background: #000 url("./images/portrait-frame-clean.gif") no-repeat 50% 50%;
     display: inline-block;
