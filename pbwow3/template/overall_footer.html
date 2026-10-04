@@ -187,7 +187,7 @@ jQuery(function($) {
 });
 </script>
 
-{% if S_VIDEOBG and (S_INDEX or S_VIDEOBG_ALL) and not S_IS_BOT  %}{% INCLUDE 'videobg.html' %}{% endif %}
+{% if S_VIDEOBG and (S_INDEX or S_VIDEOBG_ALL) and not S_IS_BOT  %}{% include 'videobg.html' ignore missing %}{% endif %}
 
 {% if S_COOKIE_NOTICE %}
 	<script src="{{ T_ASSETS_PATH }}/cookieconsent/cookieconsent.min.js?assets_version={{ T_ASSETS_VERSION }}"></script>
