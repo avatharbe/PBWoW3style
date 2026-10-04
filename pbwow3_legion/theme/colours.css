@@ -4,23 +4,23 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 h1 {
-    font-family: "Lifecraft", "MetallophileSp8-Light","Morpheus","Palatino Linotype",Times,serif;
-    letter-spacing: 0.05em;
+	font-family: "Lifecraft", "MetallophileSp8-Light","Morpheus","Palatino Linotype",Times,serif;
+	letter-spacing: 0.05em;
 }
 
 h2 {
-    font-family: "MetallophileSp8-Light", "Morpheus", "Palatino Linotype",Times,serif;
-    letter-spacing: 0.05em;
+	font-family: "MetallophileSp8-Light", "Morpheus", "Palatino Linotype",Times,serif;
+	letter-spacing: 0.05em;
 }
 
 .content h2, .panel h2 {
-    color: #6F9CA2;
-    font-size: 1.8em;
+	color: #6F9CA2;
+	font-size: 1.8em;
 }
 
 h2:first-letter
 {
-    font-size: 1.1em;
+	font-size: 1.1em;
 }
 
 /* Forum icons & Topic icons */

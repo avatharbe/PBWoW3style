@@ -2,99 +2,99 @@
 ---------------------------------------- */
 /* latin-ext */
 @font-face {
-  font-family: 'BigNoodleToo';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),url("fonts/BigNoodleToo.woff") format("woff"),
-       url("fonts/BigNoodleToo.woff2") format("woff2"),
-       url("fonts/BigNoodleToo.ttf") format("truetype"),
-       url("fonts/BigNoodleToo.svg") format("svg");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: 'BigNoodleToo';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),url("fonts/BigNoodleToo.woff") format("woff"),
+		url("fonts/BigNoodleToo.woff2") format("woff2"),
+		url("fonts/BigNoodleToo.ttf") format("truetype"),
+		url("fonts/BigNoodleToo.svg") format("svg");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
 @font-face {
-  font-family: 'Futura';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''), url('fonts/Futura.woff') format('woff'),
-    url('fonts/Futura.woff2') format('woff2'),
-    url('fonts/Futura.ttf') format('truetype'),
-    url('fonts/Futura.svg') format('svg');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: 'Futura';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('fonts/Futura.woff') format('woff'),
+		url('fonts/Futura.woff2') format('woff2'),
+		url('fonts/Futura.ttf') format('truetype'),
+		url('fonts/Futura.svg') format('svg');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Headings */
 h3
 {
-    font-family: "BigNoodleToo","Myriad Pro",Myriad,Arial,sans-serif;
+	font-family: "BigNoodleToo","Myriad Pro",Myriad,Arial,sans-serif;
 }
 
 h2
 {
-    /*font-family: "Futura","Myriad Pro",Myriad,Arial,sans-serif;*/
-    font-family: "BigNoodleToo", "Myriad Pro",Myriad,Arial,sans-serif;
-    font-size: 3em;
-    line-height: 30px;
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: 0.009em;
-    color: #ECFFFF;
+	/*font-family: "Futura","Myriad Pro",Myriad,Arial,sans-serif;*/
+	font-family: "BigNoodleToo", "Myriad Pro",Myriad,Arial,sans-serif;
+	font-size: 3em;
+	line-height: 30px;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.009em;
+	color: #ECFFFF;
 }
 
 
 /* Links for forum/topic lists */
 a.forumtitle {
-    font-family: "Futura", Helvetica, Arial, Sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
+	font-family: "Futura", Helvetica, Arial, Sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 a.forumtitle:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 a.topictitle {
-    font-family: "Futura", Helvetica, Arial, Sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline;
+	font-family: "Futura", Helvetica, Arial, Sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline;
 }
 
 /* links */
 #top-bar .linklist > li {
-  border: none;
+	border: none;
 }
 
 #top-bar strong {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 a.up, a.down, a.left, a.right, a.top, a.top2,
 a.arrow-up, a.arrow-down, a.arrow-left, a.arrow-right {
-    text-indent: 0;
-    text-decoration: none !important;
+	text-indent: 0;
+	text-decoration: none !important;
 }
 
 a.up:hover, a.down:hover, a.left:hover, a.right:hover, a.top:hover, a.top2:hover,
 a.arrow-up:hover, a.arrow-down:hover, a.arrow-left:hover, a.arrow-right:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a.up:before, a.down:after, a.left:before, a.right:after, a.top:before, a.top2:before,
 a.arrow-up:before, a.arrow-down:after, a.arrow-left:before, a.arrow-right:after {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: inherit;
-    line-height: 0;
-    text-decoration: none;
-    padding-right: 3px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	font-size: inherit;
+	line-height: 0;
+	text-decoration: none;
+	padding-right: 3px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a.up:before, a.arrow-up:before		{ content: "\f077"; }
@@ -105,59 +105,59 @@ a.right:after, a.arrow-right:after	{ content: "\f054"; padding-right: 0; padding
 a.top:before { content: "\f077"; }
 a.top2:before { content: "\f077"; }
 a.top2 {
-    font-size: 10px;
-    padding-left: 0;
+	font-size: 10px;
+	padding-left: 0;
 }
 
 /* Arrow links  */
 a.arrow-up, a.arrow-down, a.arrow-left, a.arrow-right {
-    padding: 0 3px !important;
+	padding: 0 3px !important;
 }
 
 .jumpbox-return a.arrow-up::before, .jumpbox-return a.arrow-down::after,
 .jumpbox-return a.arrow-left::before, .jumpbox-return a.arrow-right::after {
-    font-size: 0.7em;
-    vertical-align: middle;
+	font-size: 0.7em;
+	vertical-align: middle;
 }
 
 .jumpbox-return a.arrow-up, .jumpbox-return a.arrow-down,
 .jumpbox-return a.arrow-left, .jumpbox-return a.arrow-right {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 
 /* Post body links */
 .postlink {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
 }
 
 .postlink:hover {
-    background: none;
-    text-decoration: none;
+	background: none;
+	text-decoration: none;
 }
 
 /* Profile links */
 .postprofile a:hover, .postprofile dt.author a:hover, .search .postprofile a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /* Back to top of page */
 .back2top {
-    clear: both;
-    text-align: right;
+	clear: both;
+	text-align: right;
 }
 
 .back2top .top {
-    float: right;
-    padding-right: 11px;
-    margin-right: -10px;
-    margin-top: 0;
+	float: right;
+	padding-right: 11px;
+	margin-right: -10px;
+	margin-top: 0;
 }
 
 .icon-mark:before {
-    content: "\f046";
+	content: "\f046";
 }
 .icon-mark-read > a:before {
-    content: "\f046";
+	content: "\f046";
 }

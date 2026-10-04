@@ -13,7 +13,7 @@ Some defaults are included, like on PBWoW.com
 .blizz .bg2 .postprofile { background-image: url("./images/avatar-bg2-blizz.gif"); }
 
 .propass .postprofile .avatar {
-   overflow: visible;
+	overflow: visible;
 }
 
 .propass .postprofile .avatar:after {

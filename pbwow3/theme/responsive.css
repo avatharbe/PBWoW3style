@@ -25,16 +25,16 @@
 	}
 
 	.action-bar .search-box .inputbox ::-moz-placeholder {
-    	content: "Search...";
-  	}
+		content: "Search...";
+	}
 
-  	.action-bar .search-box .inputbox :-ms-input-placeholder {
-  		content: "Search...";
-  	}
+	.action-bar .search-box .inputbox :-ms-input-placeholder {
+		content: "Search...";
+	}
 
-  	.action-bar .search-box .inputbox ::-webkit-input-placeholder {
-  		content: "Search...";
-  	}
+	.action-bar .search-box .inputbox ::-webkit-input-placeholder {
+		content: "Search...";
+	}
 }
 
 @media (max-width: 500px) {
@@ -72,7 +72,7 @@
 
 	.action-bar > div {
 		margin-bottom: 5px;
- 	}
+	}
 
 	.action-bar > .pagination {
 		float: none;
@@ -226,8 +226,8 @@
 
 	#page-body {
 		background: url("./images/border-bot.gif") repeat-x 0 100%,
-		url("./images/border-top.gif") repeat-x 0 0,
-		rgba(0, 0, 0, 0.8);
+			url("./images/border-top.gif") repeat-x 0 0,
+			rgba(0, 0, 0, 0.8);
 		margin: 0;
 		padding-left: 5px;
 		padding-right: 5px;
@@ -682,9 +682,9 @@
 }
 
 @media only screen and (max-width: 430px), only screen and (max-device-width: 430px) {
-    .section-viewtopic .search-box .inputbox {
-        width: 100px;
-    }
+	.section-viewtopic .search-box .inputbox {
+		width: 100px;
+	}
 }
 
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
@@ -693,12 +693,12 @@
 	}
 }
 
-	/* Notifications list
+/* Notifications list
 ----------------------------------------*/
 @media only screen and (max-width: 350px), only screen and (max-device-width: 350px) {
-    .dropdown-extended .dropdown-contents {
-        width: auto;
-    }
+	.dropdown-extended .dropdown-contents {
+		width: auto;
+	}
 }
 
 
@@ -812,11 +812,11 @@ body.topbar-fixed #wrap {
 }
 
 @media (min-width: 701px) {
-    .postbody {
-    	/** deduct postprofile width (including border width, margin and padding) and postbody margin and padding */
-    	width: calc(100% - 200px - 1px - 15px);
-    	margin-right: 1px;
-    }
+	.postbody {
+		/** deduct postprofile width (including border width, margin and padding) and postbody margin and padding */
+		width: calc(100% - 200px - 1px - 15px);
+		margin-right: 1px;
+	}
 
 	.row .pagination {
 		margin-top: 2px;

@@ -27,7 +27,7 @@
 		"declaration-block-no-shorthand-property-overrides": [true, { "severity": "warning" }],
 		"declaration-no-important": [true, { "severity": "warning" }],
 		"no-duplicate-selectors": [true, { "severity": "warning" }],
-		"@stylistic/indentation": ["tab", { "severity": "warning" }],
-		"@stylistic/no-eol-whitespace": [true, { "severity": "warning" }]
+		"@stylistic/indentation": "tab",
+		"@stylistic/no-eol-whitespace": true
 	}
 }

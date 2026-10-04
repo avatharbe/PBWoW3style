@@ -1,7 +1,7 @@
 /* General Markup Styles
 ---------------------------------------- */
 body {
-    background: #000 url("./images/bg.jpg") no-repeat 50% -10px;
+	background: #000 url("./images/bg.jpg") no-repeat 50% -10px;
 }
 
 /* Main blocks
@@ -10,11 +10,11 @@ body {
 /* pbwow
 --------------------------------------------- */
 .navblock, .navblock > .inner {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 .content h2, .panel h2 {
-    font-size: 1.8em;
+	font-size: 1.8em;
 }
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
@@ -22,38 +22,38 @@ body {
 
 /*  pbwow navigation block right top */
 .navbar {
-    min-height: 47px;
+	min-height: 47px;
 }
 .navbar:before, .navbar.no-search:before {
-    width: 111px;
-    height: 75px;
-    margin-left: -99px;
-    top: -15px;
+	width: 111px;
+	height: 75px;
+	margin-left: -99px;
+	top: -15px;
 }
 .navbar:after {
-    width: 110px;
-    height: 75px;
-    margin-right: -98px;
-    top: -15px;
+	width: 110px;
+	height: 75px;
+	margin-right: -98px;
+	top: -15px;
 }
 
 .navbar ul.linklist {
-    padding: 6px 25px;
+	padding: 6px 25px;
 }
 
 
 .navbar {
-    padding: 0px 0px;
-    border-radius: 0px;
+	padding: 0px 0px;
+	border-radius: 0px;
 }
 
 .navbar li.breadcrumbs {
-    padding-left: 0px;
+	padding-left: 0px;
 }
 
 /* Pagination
 ---------------------------------------- */
 
 .pagination li a, .pagination li span {
-    border-radius: 0;
+	border-radius: 0;
 }

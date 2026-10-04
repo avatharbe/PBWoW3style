@@ -12,6 +12,6 @@ a.topictitle:hover,		a.forumtitle:hover	{ color: #13FF29; }
 a.topictitle:active,	a.forumtitle:active	{ color: #00D8FF; }
 
 .postlink {
-    border-bottom-color: #555555;
+	border-bottom-color: #555555;
 }
 

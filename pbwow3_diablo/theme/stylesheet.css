@@ -95,8 +95,8 @@ body.pbwow3 .logo {
 @media screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 	#page-body {
 		background: url("./images/border-bot.gif") repeat-x 0 100%,
-					url("./images/border-top.gif") repeat-x 0 0,
-					rgba(0,0,0,0.85) !important;
+			url("./images/border-top.gif") repeat-x 0 0,
+			rgba(0,0,0,0.85) !important;
 	}
 
 	.navbar ul.linklist {

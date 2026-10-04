@@ -15,7 +15,7 @@ Some defaults are included, like on PBWoW.com
 .red .bg2 .postprofile { background-image: url("./images/avatar-bg2-red.jpg"); }
 
 .propass .postprofile .avatar {
-   overflow: visible;
+	overflow: visible;
 }
 
 .propass .postprofile .avatar:after {
@@ -203,5 +203,5 @@ body.section-viewtopic .postbody p.author {
  */
 #video-background,
 #video-container {
-    pointer-events: none;
+	pointer-events: none;
 }

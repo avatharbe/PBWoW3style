@@ -24,9 +24,8 @@ const RULES = [
 	{ id: 'definition', severity: 'error', re: /\bdefinition\.(?!STYLESHEETS\b|SCRIPTS\b|POPUP\b)\w+/, msg: 'definition.X; read the {% set %} variable instead' },
 	{ id: 'legacy-operator', severity: 'error', re: /\{%.*?\s(eq|neq|ne|gt|lt|gte|lte|mod)\s.*?%\}/, msg: 'legacy comparison operator; use == != > < >= <= %' },
 	{ id: 'extension-var', severity: 'error', re: new RegExp(`\\b(${EXTENSION_VARS.join('|')})\\b`), msg: 'extension-owned variable; the extension should inject it via a template event' },
-	// Cleanup rules, enforced once the whitespace cleanup lands.
-	{ id: 'trailing-whitespace', severity: 'warning', re: /[ \t]+$/, msg: 'trailing whitespace' },
-	{ id: 'space-indent', severity: 'warning', re: /^ {2,}\S/, msg: 'space indentation; use tabs' },
+	{ id: 'trailing-whitespace', severity: 'error', re: /[ \t]+$/, msg: 'trailing whitespace' },
+	{ id: 'space-indent', severity: 'error', re: /^ {2,}\S/, msg: 'space indentation; use tabs' },
 ];
 
 const counts = { error: 0, warning: 0 };

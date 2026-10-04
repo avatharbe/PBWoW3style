@@ -1,65 +1,65 @@
 /* Recent Topics  Overwatch
 --------------------------------------------- */
 #recent-topics {
-  border-top-color: transparent !important;
+	border-top-color: transparent !important;
 }
 
 #recent-topics li.row {
-  background: rgba(8, 16, 32, 0.10) !important;
-  border-bottom-color: transparent !important;
+	background: rgba(8, 16, 32, 0.10) !important;
+	border-bottom-color: transparent !important;
 }
 
 #recent-topics li.row:hover {
-  background: rgba(0, 0, 0, 0.15) !important;
+	background: rgba(0, 0, 0, 0.15) !important;
 }
 
 #recent-topics a.forum-link {
-  color: #3d6f95 !important;
+	color: #3d6f95 !important;
 }
 
 /* Breadcrumb Menu
 --------------------------------------------- */
 #breadcrumb-menu .dropdown .pointer {
-  border-color: #5F3572 transparent;
+	border-color: #5F3572 transparent;
 }
 
 #breadcrumb-menu .dropdown .pointer-inner {
-  bottom: -11px;
+	bottom: -11px;
 }
 
 #breadcrumb-menu .dropdown-up .pointer-inner {
-  bottom: auto;
-  top: -11px;
+	bottom: auto;
+	top: -11px;
 }
 
 #breadcrumb-menu .dropdown-contents {
-  border: 1px solid #5F3572;
-  box-shadow: none;
+	border: 1px solid #5F3572;
+	box-shadow: none;
 }
 
 #breadcrumb-menu .dropdown li {
-  border-color: #282828;
+	border-color: #282828;
 }
 
 #breadcrumb-menu a {
-  color: #48CCFF;
+	color: #48CCFF;
 }
 
 #breadcrumb-menu a:hover {
-  background-color: rgba(29, 63, 98, 0.3);
-  color: #FFF;
+	background-color: rgba(29, 63, 98, 0.3);
+	color: #FFF;
 }
 
 #breadcrumb-menu li.children > a:before {
-  color: #0096B7;
+	color: #0096B7;
 }
 
 #breadcrumb-menu li.children > a:hover:before {
-  color: #FFF;
+	color: #FFF;
 }
 
 #breadcrumb-menu li.current > a {
-  color: #FFF;
+	color: #FFF;
 }
 
 
@@ -68,56 +68,56 @@
 
 #qr_postform
 {
-  margin: 0 -19px;
+	margin: 0 -19px;
 }
 
 #qr_postform .panel {
-  background: url("./images/reply_bg.png") 50% 0 no-repeat;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  padding: 15px;
-  max-width: inherit;
-  min-height: 200px;
+	background: url("./images/reply_bg.png") 50% 0 no-repeat;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 15px;
+	max-width: inherit;
+	min-height: 200px;
 }
 
 #qr_postform > .panel > .inner {
-  max-width: 643px;
-  margin: 0 auto;
+	max-width: 643px;
+	margin: 0 auto;
 }
 
 #qr_postform #message-box {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  background: none;
-  padding: 0;
-  margin: 5px 0 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	background: none;
+	padding: 0;
+	margin: 5px 0 10px;
 }
 
 #qr_postform textarea {
-  margin: 0;
-  padding: 2px;
-  transition: box-shadow 0.25s ease-in-out 0s;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 0;
-  background: #040D1A;
+	margin: 0;
+	padding: 2px;
+	transition: box-shadow 0.25s ease-in-out 0s;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 0;
+	background: #040D1A;
 }
 
 
 #qr_postform textarea:focus {
-  box-shadow: 0 0 3px 1px #3380c8;
+	box-shadow: 0 0 3px 1px #3380c8;
 }
 
 #qr_postform fieldset.submit-buttons {
-  position: relative;
-  margin: 0;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: none;
-  padding: 0;
+	position: relative;
+	margin: 0;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: none;
+	padding: 0;
 }
 
 
@@ -126,31 +126,31 @@
 
 .collapse-box h2,
 .stat-block h3 {
-  margin: 10px 2px 0;
-  padding: 0 0 0 8px;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-  transition: border-bottom 0.20s ease-in-out 0s;
-  /*font-family: "Futura","Myriad Pro",Myriad,Arial,sans-serif;*/
-  font-family: "BigNoodleToo";
-  font-size: 3em;
-  line-height: 30px;
-  font-weight: normal;
-  font-style: italic;
-  letter-spacing: 0.009em;
-  color: #ECFFFF;
-  text-shadow: 0 0 16px #009CFF;
-  border-bottom: 1px solid #172040;
+	margin: 10px 2px 0;
+	padding: 0 0 0 8px;
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	transition: border-bottom 0.20s ease-in-out 0s;
+	/*font-family: "Futura","Myriad Pro",Myriad,Arial,sans-serif;*/
+	font-family: "BigNoodleToo";
+	font-size: 3em;
+	line-height: 30px;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.009em;
+	color: #ECFFFF;
+	text-shadow: 0 0 16px #009CFF;
+	border-bottom: 1px solid #172040;
 }
 
 .stat-block h3 {
-  font-size: 3em;
-  line-height: 30px;
+	font-size: 3em;
+	line-height: 30px;
 }
 
 .collapse-box h2:hover,
 .stat-block h3:hover {
-  border-bottom-color: #FE00F5;
+	border-bottom-color: #FE00F5;
 }
 
 .collapse-box h2 a:link, .collapse-box h2 a:visited,
@@ -165,25 +165,25 @@
 
 .collapse-box h2 a:before,
 .stat-block h3 a:before {
-  color: #523878;
+	color: #523878;
 }
 
 .collapse-box h2:hover a:before,
 .stat-block h3:hover a:before {
-  color: #A41CB0;
-  text-shadow: 0 0 5px #FE00F5;
+	color: #A41CB0;
+	text-shadow: 0 0 5px #FE00F5;
 }
 
 .collapse-box h2.open,
 .stat-block h3.open {
-  border-bottom-color: transparent;
+	border-bottom-color: transparent;
 }
 
 .collapse-box h2 a,
 .stat-block h3 a {
-  display: block;
-  transition: color 0.20s ease-in-out 0s;
-  color: #888;
+	display: block;
+	transition: color 0.20s ease-in-out 0s;
+	color: #888;
 }
 
 .collapse-box h2 a:hover,
@@ -194,18 +194,18 @@
 
 .collapse-box h2.open a[href="#"]:before,
 .stat-block h3.open a[href="#"]:before {
-  content: "\f0d7";
+	content: "\f0d7";
 }
 
 .collapse-box h2 a[href="#"]:before,
 .stat-block h3 a[href="#"]:before {
-  display: inline-block;
-  margin-right: 8px;
-  font-family: FontAwesome;
-  font-weight: normal;
-  content: "\f0d8";
-  font-size: 0.8em;
-  opacity: 1;
+	display: inline-block;
+	margin-right: 8px;
+	font-family: FontAwesome;
+	font-weight: normal;
+	content: "\f0d8";
+	font-size: 0.8em;
+	opacity: 1;
 }
 
 
@@ -214,61 +214,61 @@
 /* Board3
 --------------------------------------------- */
 ul.forums {
-  background: transparent;
+	background: transparent;
 }
 
 
 /* Board Rules
 --------------------------------------------- */
 .mini-panel {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(rgba(161, 139, 175, 0.45), rgba(161, 139, 175, 0.14)), linear-gradient(rgba(161, 139, 175, 0.45), rgba(161, 139, 175, 0.14));
-  background-position: 0 0px, 100% 0;
-  background-repeat: no-repeat;
-  background-size: 1px 100%;
-  border: none;
-  border-bottom: 1px solid rgba(161, 139, 175, 0.14);
-  border-top: 1px solid rgba(161, 139, 175, 0.45);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
+	background-image: linear-gradient(rgba(161, 139, 175, 0.45), rgba(161, 139, 175, 0.14)), linear-gradient(rgba(161, 139, 175, 0.45), rgba(161, 139, 175, 0.14));
+	background-position: 0 0px, 100% 0;
+	background-repeat: no-repeat;
+	background-size: 1px 100%;
+	border: none;
+	border-bottom: 1px solid rgba(161, 139, 175, 0.14);
+	border-top: 1px solid rgba(161, 139, 175, 0.45);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 ul.menu li {
-  border-color: #172040;
+	border-color: #172040;
 }
 
 
 /* Board Announcements
 --------------------------------------------- */
 #phpbb_announcement {
-  background-clip: border-box;
-  background-origin: padding-box;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(rgba(0, 167, 255, 0.5), rgba(0, 91, 139, 0.5)), linear-gradient(rgba(0, 167, 255, 0.5), rgba(0, 91, 139, 0.5));
-  background-position: 100% 0px, 0 0;
-  background-repeat: no-repeat;
-  background-size: 4px 100%;
-  border-width: 4px 0;;
-  border-bottom-color: rgba(0, 91, 139, 0.5);
-  border-top-color: rgba(0, 167, 255, 0.5);
-  box-shadow: none;
-  color: #00a7ff;
-  padding: 14px 16px;
-  transition: none;
+	background-clip: border-box;
+	background-origin: padding-box;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image: linear-gradient(rgba(0, 167, 255, 0.5), rgba(0, 91, 139, 0.5)), linear-gradient(rgba(0, 167, 255, 0.5), rgba(0, 91, 139, 0.5));
+	background-position: 100% 0px, 0 0;
+	background-repeat: no-repeat;
+	background-size: 4px 100%;
+	border-width: 4px 0;;
+	border-bottom-color: rgba(0, 91, 139, 0.5);
+	border-top-color: rgba(0, 167, 255, 0.5);
+	box-shadow: none;
+	color: #00a7ff;
+	padding: 14px 16px;
+	transition: none;
 }
 
 #phpbb_announcement:hover {
-  background-image: linear-gradient(#73CFFF, #007CBD), linear-gradient(#73CFFF, #007CBD);
-  border-bottom-color: #007CBD;
-  border-top-color: #73CFFF;
-  box-shadow: 0 0 20px 0 rgba(0, 156, 255, 0.3);
+	background-image: linear-gradient(#73CFFF, #007CBD), linear-gradient(#73CFFF, #007CBD);
+	border-bottom-color: #007CBD;
+	border-top-color: #73CFFF;
+	box-shadow: 0 0 20px 0 rgba(0, 156, 255, 0.3);
 }
 
 #phpbb_announcement .close {
-  transition: none !important;
+	transition: none !important;
 }
 
 #phpbb_announcement .close:before {
-  color: #FFF;
+	color: #FFF;
 }
 
 
@@ -276,18 +276,18 @@ ul.menu li {
 /* Lightbox
 --------------------------------------------- */
 .lb-outerContainer {
-  background-color: #000 !important;
-  border: 2px solid rgb(62, 7, 98) !important;
-  border-radius: 0 !important;
-  box-shadow: 0 0 6em 1em rgb(33, 3, 53) !important;
+	background-color: #000 !important;
+	border: 2px solid rgb(62, 7, 98) !important;
+	border-radius: 0 !important;
+	box-shadow: 0 0 6em 1em rgb(33, 3, 53) !important;
 }
 
 .lb-container {
-  padding: 0 !important;
+	padding: 0 !important;
 }
 
 .lightbox .lb-image {
-  border-radius: 0 !important;
+	border-radius: 0 !important;
 }
 
 
@@ -295,42 +295,42 @@ ul.menu li {
 /* Quick Login
 --------------------------------------------- */
 #quick-login-panel {
-  background: #050a14;
-  background-clip: border-box;
-  background-origin: border-box;
-  background-color: rgba(5, 10, 20, 0.9);
-  background-image: linear-gradient(#73CFFF, #007CBD), linear-gradient(#73CFFF, #007CBD), url("./images/particles.png");
-  background-position: 100% 0px, 0 0, 200px 100%;
-  background-repeat: no-repeat;
-  background-size: 5px 100%, 5px 100%, auto auto;
-  border: none;
-  border-bottom: 5px solid #007CBD;
-  border-top: 5px solid #73CFFF;
-  border-radius: 0;
-  color: #8EB1BC;
-  box-shadow: 0 0 20px 0 rgba(0, 156, 255, 0.4);
+	background: #050a14;
+	background-clip: border-box;
+	background-origin: border-box;
+	background-color: rgba(5, 10, 20, 0.9);
+	background-image: linear-gradient(#73CFFF, #007CBD), linear-gradient(#73CFFF, #007CBD), url("./images/particles.png");
+	background-position: 100% 0px, 0 0, 200px 100%;
+	background-repeat: no-repeat;
+	background-size: 5px 100%, 5px 100%, auto auto;
+	border: none;
+	border-bottom: 5px solid #007CBD;
+	border-top: 5px solid #73CFFF;
+	border-radius: 0;
+	color: #8EB1BC;
+	box-shadow: 0 0 20px 0 rgba(0, 156, 255, 0.4);
 }
 
 #quick-login-panel .content {
-  border: none;
-  box-shadow: none;
+	border: none;
+	box-shadow: none;
 }
 
 #quick-login-panel dd {
-  background: none !important;
+	background: none !important;
 }
 
 #quick-login-panel dt {
-  font-family: "Futura", Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-  top: 0;
-  left: 20%;
+	font-family: "Futura", Arial, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	top: 0;
+	left: 20%;
 }
 
 #quick-login-panel input.inputbox {
-  margin: 13px 0 0 22px;
-  width: 191px !important;
-  height: 22px;
-  border-radius: 0;
+	margin: 13px 0 0 22px;
+	width: 191px !important;
+	height: 22px;
+	border-radius: 0;
 }

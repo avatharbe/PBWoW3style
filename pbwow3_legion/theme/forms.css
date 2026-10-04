@@ -2,106 +2,106 @@
 /* Search box (header)
 --------------------------------------------- */
 .search-header {
-    background: url("./images/forumliner-top-left.gif") no-repeat 0 0;
-    border-radius: 0;
-    position: absolute;
-    float: none;
-    height: 39px;
-    width: 355px;
-    bottom: 0;
-    left: 12px;
-    text-align: left;
-    margin: 0;
+	background: url("./images/forumliner-top-left.gif") no-repeat 0 0;
+	border-radius: 0;
+	position: absolute;
+	float: none;
+	height: 39px;
+	width: 355px;
+	bottom: 0;
+	left: 12px;
+	text-align: left;
+	margin: 0;
 }
 
 .search-header:before {
-    content: "";
-    display: block;
-    position: absolute;
-    background: url("./en/forum-menu-quicksearch.gif") no-repeat 0 0;
-    width: 85px;
-    height: 17px;
-    left: 6px;
-    top: -6px;
+	content: "";
+	display: block;
+	position: absolute;
+	background: url("./en/forum-menu-quicksearch.gif") no-repeat 0 0;
+	width: 85px;
+	height: 17px;
+	left: 6px;
+	top: -6px;
 }
 
 .search-header a.button {
-    background: url("./en/forum-menu-advanced-search.gif") no-repeat 0 0;
-    border: none;
-    height: 17px;
-    width: 107px;
-    padding: 0;
-    position: absolute;
-    left: 94px;
-    top: -6px;
-    font-size: 0;
-    box-shadow: none;
-    transition: none;
+	background: url("./en/forum-menu-advanced-search.gif") no-repeat 0 0;
+	border: none;
+	height: 17px;
+	width: 107px;
+	padding: 0;
+	position: absolute;
+	left: 94px;
+	top: -6px;
+	font-size: 0;
+	box-shadow: none;
+	transition: none;
 }
 
 .search-header button.search-icon {
-    background: url("./en/forum-menu-search.gif") no-repeat;
-    height: 39px;
-    width: 74px !important;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    font-size: 0;
-    box-shadow: none;
+	background: url("./en/forum-menu-search.gif") no-repeat;
+	height: 39px;
+	width: 74px !important;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	font-size: 0;
+	box-shadow: none;
 }
 
 .search-header .inputbox {
-    margin: 11px 3px 0 12px;
-    padding: 2px;
-    width: 182px;
-    height: 21px;
-    line-height: 15px;
-    background: #0D1A2D url("./images/forum-menu-search-tile.gif") repeat-x scroll 0 0;
-    border: 1px solid #7F7F7F;
-    border-radius: 2px;
+	margin: 11px 3px 0 12px;
+	padding: 2px;
+	width: 182px;
+	height: 21px;
+	line-height: 15px;
+	background: #0D1A2D url("./images/forum-menu-search-tile.gif") repeat-x scroll 0 0;
+	border: 1px solid #7F7F7F;
+	border-radius: 2px;
 }
 
 /* Quick-reply
 --------------------------------------------- */
 #qr_postform .panel {
-    position: relative;
-    margin-bottom: 20px;
+	position: relative;
+	margin-bottom: 20px;
 }
 #qr_postform .panel:before,
 #qr_postform .panel:after {
-    content: "";
-    position: absolute;
-    width: 100%;
+	content: "";
+	position: absolute;
+	width: 100%;
 }
 #qr_postform .panel:before {
-    background: url("./images/deco.png") 50% 0 no-repeat;
-    height: 45px;
-    bottom: -24px;
+	background: url("./images/deco.png") 50% 0 no-repeat;
+	height: 45px;
+	bottom: -24px;
 }
 #qr_postform .panel:after {
-    background: url("./images/skull.png") 50% 0 no-repeat;
-    height: 90px;
-    bottom: -54px;
+	background: url("./images/skull.png") 50% 0 no-repeat;
+	height: 90px;
+	bottom: -54px;
 }
 #qr_postform .panel:hover:after {
-    background-position: 50% -100px;
+	background-position: 50% -100px;
 }
 
 /* Collapseable blocks
 --------------------------------------------- */
 
 .stat-block h3 {
-    font-size: 1.6em;
+	font-size: 1.6em;
 }
 
 .collapse-box h2,
 .stat-block h3 {
-    font-family: "MetallophileSp8-Light","MetallophileSp8W01-MediumIt", "Palatino Linotype",Times,serif;
-    font-size: 2em;
-    letter-spacing: 0.05em;
+	font-family: "MetallophileSp8-Light","MetallophileSp8W01-MediumIt", "Palatino Linotype",Times,serif;
+	font-size: 2em;
+	letter-spacing: 0.05em;
 }
 
 .collapse-box h2 a[href="#"]:before,
 .stat-block h3 a[href="#"]:before {
-    font-size: 0.7em;
+	font-size: 0.7em;
 }

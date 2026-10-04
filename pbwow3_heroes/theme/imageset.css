@@ -1,38 +1,38 @@
 /* Imageset */
 span.imageset {
-    display: inline-block !important;
-    background: none;
-    margin: 0;
-    padding: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+	display: inline-block !important;
+	background: none;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
 }
 
 .imageset:before {
-    display: block;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: inherit;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #8EB1BC;
+	display: block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: inherit;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #8EB1BC;
 }
 
 .imageset.icon_contact,
 .imageset.icon_topic_reported,
 .imageset.icon_topic_unapproved,
 .imageset.icon_topic_deleted {
-    position: relative;
-    background: none !important;
-    padding: 15px 0 0 17px;
-    text-align: center;
+	position: relative;
+	background: none !important;
+	padding: 15px 0 0 17px;
+	text-align: center;
 }
 
 .imageset.icon_topic_poll 			{ background: url("./images/icons/poll.gif") 100% 100% no-repeat; padding: 14px 0 0 20px; vertical-align: middle; }

@@ -2,17 +2,17 @@
 ---------------------------------------- */
 
 .button {
-    border: 1px;
-    border-radius: 3px;
-    font-family: "Jockey One", "Myriad Pro", Myriad, Arial, sans-serif;
-    height: auto;
-    line-height: 28px;
-    padding: 0 12px;
-    text-transform: uppercase;
-    transition: all 0.2s;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*-webkit-font-smoothing: antialiased;
+	border: 1px;
+	border-radius: 3px;
+	font-family: "Jockey One", "Myriad Pro", Myriad, Arial, sans-serif;
+	height: auto;
+	line-height: 28px;
+	padding: 0 12px;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;*/
 }
 
@@ -20,71 +20,71 @@
 ----------------------------------------*/
 .button-icon-only,
 .button-icon-only:hover{
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    line-height: inherit;
-    padding: 0 3px;
-    height: auto;
-    width: auto;
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	line-height: inherit;
+	padding: 0 3px;
+	height: auto;
+	width: auto;
 }
 
 .button-icon-only:hover:before {
-    color: #FFF;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+	color: #FFF;
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .button-icon-only:before {
-    background: none;
-    content: none;
-    height: auto;
-    width: auto;
-    font-family: FontAwesome;
-    text-shadow: 0 0 5px #000;
-    font-size: 1.3em;
-    line-height: inherit;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-left: 0;
+	background: none;
+	content: none;
+	height: auto;
+	width: auto;
+	font-family: FontAwesome;
+	text-shadow: 0 0 5px #000;
+	font-size: 1.3em;
+	line-height: inherit;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-left: 0;
 }
 .button-icon-only:after
 {
-    background: none;
-    display: inline-block;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0 0 0 5px;
-    right: auto;
-    left: auto;
-    top: auto;
-    float: none;
-    font-family: FontAwesome;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: inherit;
-    text-decoration: none;
-    vertical-align: top;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	background: none;
+	display: inline-block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 0 0 5px;
+	right: auto;
+	left: auto;
+	top: auto;
+	float: none;
+	font-family: FontAwesome;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: inherit;
+	text-decoration: none;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fa-times:before {
-    color: red;
+	color: red;
 }
 
 .fa-exclamation-circle::before {
-    color: #F40;
+	color: #F40;
 }
 
 .fa-warning:before, .fa-exclamation-triangle:before {
-    color: #FFB019;
+	color: #FFB019;
 }
 
 .fa-info-circle:before {
-    color: #00B6FF;
+	color: #00B6FF;
 }
 
 /* Poster contact icons
@@ -99,6 +99,6 @@
 /* Profile & navigation icons */
 
 .profile-context .user-icons a:before {
-    display: none;
-    font-size: 16px;
+	display: none;
+	font-size: 16px;
 }

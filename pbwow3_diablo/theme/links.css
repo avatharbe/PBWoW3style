@@ -4,59 +4,59 @@
 /* Links, arrows & text
 --------------------------------------------- */
 @font-face {
-    font-family: "Exocet Blizzard";
-    src:url("fonts/exocet-blizzard-medium.eot?#iefix") format("embedded-opentype"),
-    url("fonts/exocet-blizzard-medium.woff") format("woff"),
-    url("fonts/exocet-blizzard-medium.ttf") format("truetype"),
-    url("fonts/exocet-blizzard-medium.svg#svgExocetReaper") format("svg");
-    font-display: swap;
+	font-family: "Exocet Blizzard";
+	src:url("fonts/exocet-blizzard-medium.eot?#iefix") format("embedded-opentype"),
+		url("fonts/exocet-blizzard-medium.woff") format("woff"),
+		url("fonts/exocet-blizzard-medium.ttf") format("truetype"),
+		url("fonts/exocet-blizzard-medium.svg#svgExocetReaper") format("svg");
+	font-display: swap;
 }
 @font-face {
-    font-family: "Exocet Blizzard Light";
-    src:url("fonts/exocet-blizzard-light.eot?#iefix") format("embedded-opentype"),
-    url("fonts/exocet-blizzard-light.woff") format("woff"),
-    url("fonts/exocet-blizzard-light.ttf") format("truetype"),
-    url("fonts/exocet-blizzard-light.svg#svgExocetReaper") format("svg");
-   font-display: swap;
+	font-family: "Exocet Blizzard Light";
+	src:url("fonts/exocet-blizzard-light.eot?#iefix") format("embedded-opentype"),
+		url("fonts/exocet-blizzard-light.woff") format("woff"),
+		url("fonts/exocet-blizzard-light.ttf") format("truetype"),
+		url("fonts/exocet-blizzard-light.svg#svgExocetReaper") format("svg");
+	font-display: swap;
 }
 
 @font-face {
-    font-family: "Exocet Blizzard Heavy";
-    src:url("fonts/exocet-blizzard-heavy.eot?#iefix") format("embedded-opentype"),
+	font-family: "Exocet Blizzard Heavy";
+	src:url("fonts/exocet-blizzard-heavy.eot?#iefix") format("embedded-opentype"),
 		url("fonts/exocet-blizzard-heavy.woff") format("woff"),
 		url("fonts/exocet-blizzard-heavy.ttf") format("truetype"),
 		url("fonts/exocet-blizzard-heavy.svg#svgExocetReaper") format("svg");
-  font-display: swap;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Exocet Reaper";
-    src:url("fonts/exocet-reaper-medium.eot?#iefix") format("embedded-opentype"),
+	font-family: "Exocet Reaper";
+	src:url("fonts/exocet-reaper-medium.eot?#iefix") format("embedded-opentype"),
 		url("fonts/exocet-reaper-medium.woff") format("woff"),
 		url("fonts/exocet-reaper-medium.ttf") format("truetype"),
 		url("fonts/exocet-reaper-medium.svg#svgExocetReaper") format("svg");
-  font-display: swap;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Exocet Reaper Light";
-    src:url("fonts/exocet-reaper-light.eot?#iefix") format("embedded-opentype"),
+	font-family: "Exocet Reaper Light";
+	src:url("fonts/exocet-reaper-light.eot?#iefix") format("embedded-opentype"),
 		url("fonts/exocet-reaper-light.woff") format("woff"),
 		url("fonts/exocet-reaper-light.ttf") format("truetype"),
 		url("fonts/exocet-reaper-light.svg#svgExocetReaper") format("svg");
-  font-display: swap;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Open Sans";
-    src:url("fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"),
+	font-family: "Open Sans";
+	src:url("fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"),
 		url("fonts/OpenSans-Regular.woff") format("woff");
-    font-display: swap;
+	font-display: swap;
 }
 
 h2 {
-    font-family: "Exocet Blizzard","Palatino Linotype",Times,serif;
+	font-family: "Exocet Blizzard","Palatino Linotype",Times,serif;
 }
 
 
 h2 a:focus, a:active {
-  color: #00C0FF;
-  text-decoration: none;
+	color: #00C0FF;
+	text-decoration: none;
 }
