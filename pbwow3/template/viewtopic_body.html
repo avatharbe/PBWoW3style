@@ -197,16 +197,16 @@
 						<div class="dropdown-contents contact-icons">
 							{% for contact in postrow.contact %}
 								{% set REMAINDER = contact.S_ROW_COUNT % 4 %}
-								{% DEFINE S_LAST_CELL = ((REMAINDER eq 3) or (contact.S_LAST_ROW and contact.S_NUM_ROWS < 4)) %}
-								{% if REMAINDER eq 0 %}
+								{% set S_LAST_CELL = ((REMAINDER == 3) or (contact.S_LAST_ROW and contact.S_NUM_ROWS < 4)) %}
+								{% if REMAINDER == 0 %}
 									<div>
 								{% endif %}
-									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if definition.S_LAST_CELL %} class="last-cell"{% endif %}{% if contact.ID eq 'jabber' %} onclick="popup(this.href, 750, 320); return false;"{% endif %}>
+									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if S_LAST_CELL %} class="last-cell"{% endif %}{% if contact.ID == 'jabber' %} onclick="popup(this.href, 750, 320); return false;"{% endif %}>
                                         {% EVENT viewtopic_body_contact_icon_prepend %}
                                         <span class="contact-icon {postrow.contact.ID}-icon">{postrow.contact.NAME}</span>
                                         {% EVENT viewtopic_body_contact_icon_append %}
 									</a>
-								{% if REMAINDER eq 3 or contact.S_LAST_ROW %}
+								{% if REMAINDER == 3 or contact.S_LAST_ROW %}
 									</div>
 								{% endif %}
 							{% endfor %}
@@ -276,10 +276,10 @@
                 <a {% if postrow.S_FIRST_UNREAD %}class="first-unread" {% endif %}href="{{ postrow.U_MINI_POST }}">{{ postrow.POST_SUBJECT }}</a>
             </h3>
 
-		{% DEFINE SHOW_POST_BUTTONS = (postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE) %}
+		{% set SHOW_POST_BUTTONS = (postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE) %}
 		{% EVENT viewtopic_body_post_buttons_list_before %}
 		{% if not S_IS_BOT %}
-			{% if definition.SHOW_POST_BUTTONS %}
+			{% if SHOW_POST_BUTTONS %}
 				<ul class="post-buttons">
 					{% EVENT viewtopic_body_post_buttons_before %}
 					{% if postrow.U_EDIT %}
@@ -358,7 +358,7 @@
 			{% else %}
 				<p class="post-notice unapproved">
 					<span><i class="icon fa-exclamation icon-red fa-fw" aria-hidden="true"></i></span>
-					<strong>{L_POST_UNAPPROVED_EXPLAIN}</strong>
+					<strong>{{ lang('POST_UNAPPROVED_EXPLAIN') }}</strong>
 				</p>
 			{% endif %}
 			{% elseif postrow.S_POST_DELETED %}
@@ -476,8 +476,8 @@
 				<div class="pointer"><div class="pointer-inner"></div></div>
 				<ul class="dropdown-contents">
 				{% for quickmod in loops.quickmod %}
-					{% DEFINE QUICKMOD_AJAX = (quickmod.VALUE in ['lock', 'unlock', 'delete_topic', 'restore_topic', 'make_normal', 'make_sticky', 'make_announce', 'make_global']) %}
-					<li><a href="{{ quickmod.LINK }}"{% if definition.QUICKMOD_AJAX %} data-ajax="true" data-refresh="true"{% endif %}>{{ quickmod.TITLE }}</a></li>
+					{% set QUICKMOD_AJAX = (quickmod.VALUE in ['lock', 'unlock', 'delete_topic', 'restore_topic', 'make_normal', 'make_sticky', 'make_announce', 'make_global']) %}
+					<li><a href="{{ quickmod.LINK }}"{% if QUICKMOD_AJAX %} data-ajax="true" data-refresh="true"{% endif %}>{{ quickmod.TITLE }}</a></li>
 				{% endfor %}
 				</ul>
 			</div>

@@ -71,6 +71,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 
 - The custom header links from the pbWoW extension are no longer printed by the style itself. pbwowext 3.3.3 renders them through a template event, so update the extension together with this style, or the links disappear. (#35)
 - Removed a leftover Recent Topics advertisement block from the bottom of the board index. Recent Topics renders its ad itself and limits it to the Side location; the style's copy only showed an ad in the top or bottom location, against that setting. (#36)
+- Replaced the legacy template syntax left in pbwow3 and its sub-styles (`DEFINE`, `eq`/`neq` and `{L_...}`) with Twig `set`, `==`/`!=` and `lang()`. Pages render exactly as before. (#41)
 
 3.3.21 (28-09-2026)
 

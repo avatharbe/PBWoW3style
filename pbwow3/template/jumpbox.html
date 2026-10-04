@@ -35,8 +35,8 @@
 			<div class="pointer"><div class="pointer-inner"></div></div>
 			<ul class="dropdown-contents">
 				{% for jumpbox_forums in loops.jumpbox_forums %}
-				{% if jumpbox_forums.FORUM_ID neq -1 %}
-				<li><a href="{{ jumpbox_forums.LINK }}" class="{% if jumpbox_forums.level %}jumpbox-sub-link{% elseif jumpbox_forums.S_IS_CAT %}jumpbox-cat-link{% else %}jumpbox-forum-link{% endif %}">{% for level in jumpbox_forums.level %}<span class="spacer"></span>{% endfor %} <span>{% if jumpbox_forums.level %}{% if S_CONTENT_DIRECTION eq 'rtl' %}&#8626;{% else %}&#8627;{% endif %} &nbsp;{% endif %} {{ jumpbox_forums.FORUM_NAME }}</span></a></li>
+				{% if jumpbox_forums.FORUM_ID != -1 %}
+				<li><a href="{{ jumpbox_forums.LINK }}" class="{% if jumpbox_forums.level %}jumpbox-sub-link{% elseif jumpbox_forums.S_IS_CAT %}jumpbox-cat-link{% else %}jumpbox-forum-link{% endif %}">{% for level in jumpbox_forums.level %}<span class="spacer"></span>{% endfor %} <span>{% if jumpbox_forums.level %}{% if S_CONTENT_DIRECTION == 'rtl' %}&#8626;{% else %}&#8627;{% endif %} &nbsp;{% endif %} {{ jumpbox_forums.FORUM_NAME }}</span></a></li>
 				{% endif %}
 				{% endfor %}
 			</ul>

@@ -18,10 +18,11 @@ const EXTENSION_VARS = ['HEADERLINKS_CODE', 'TOPBAR_CODE', 'ADS_INDEX_CODE', 'RE
 
 const RULES = [
 	{ id: 'legacy-tag', severity: 'error', re: /<!--\s*(IF|ELSEIF|ELSE|ENDIF|BEGIN|BEGINELSE|END|INCLUDE\w*|DEFINE|UNDEFINE|EVENT)\b/, msg: 'legacy <!-- ... --> template tag; use Twig {% %}' },
-	// Warnings until #41 lands.
-	{ id: 'legacy-var', severity: 'warning', re: /(?<!\{)\{(L_|LA_|S_|U_|T_)?[A-Z][A-Z0-9_]*(\.[A-Z][A-Z0-9_]*)?\}(?!\})/, msg: 'legacy {VAR} output; use {{ VAR }} / {{ lang() }}' },
-	{ id: 'define', severity: 'warning', re: /\{%-?\s*(DEFINE|UNDEFINE)\b/, msg: 'DEFINE; use {% set %}' },
-	{ id: 'definition', severity: 'warning', re: /\bdefinition\.(?!STYLESHEETS\b|SCRIPTS\b)\w+/, msg: 'definition.X; read the {% set %} variable instead' },
+	{ id: 'legacy-var', severity: 'error', re: /(?<!\{)\{(L_|LA_|S_|U_|T_)?[A-Z][A-Z0-9_]*(\.[A-Z][A-Z0-9_]*)?\}(?!\})/, msg: 'legacy {VAR} output; use {{ VAR }} / {{ lang() }}' },
+	// POPUP mirrors prosilver's simple_header.html, where event templates can read it as definition.POPUP.
+	{ id: 'define', severity: 'error', re: /\{%-?\s*(DEFINE|UNDEFINE)\b(?!\s+POPUP\b)/, msg: 'DEFINE; use {% set %}' },
+	{ id: 'definition', severity: 'error', re: /\bdefinition\.(?!STYLESHEETS\b|SCRIPTS\b|POPUP\b)\w+/, msg: 'definition.X; read the {% set %} variable instead' },
+	// Warning until #51 removes the last offender.
 	{ id: 'legacy-operator', severity: 'warning', re: /\{%.*?\s(eq|neq|ne|gt|lt|gte|lte|mod)\s.*?%\}/, msg: 'legacy comparison operator; use == != > < >= <= %' },
 	{ id: 'extension-var', severity: 'error', re: new RegExp(`\\b(${EXTENSION_VARS.join('|')})\\b`), msg: 'extension-owned variable; the extension should inject it via a template event' },
 	// Cleanup rules, enforced once the whitespace cleanup lands.
