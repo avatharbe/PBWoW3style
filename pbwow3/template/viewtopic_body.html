@@ -203,7 +203,7 @@
 								{% endif %}
 									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if S_LAST_CELL %} class="last-cell"{% endif %}{% if contact.ID == 'jabber' %} onclick="popup(this.href, 750, 320); return false;"{% endif %}>
                                         {% EVENT viewtopic_body_contact_icon_prepend %}
-                                        <span class="contact-icon {postrow.contact.ID}-icon">{postrow.contact.NAME}</span>
+                                        <span class="contact-icon {{ contact.ID }}-icon">{{ contact.NAME }}</span>
                                         {% EVENT viewtopic_body_contact_icon_append %}
 									</a>
 								{% if REMAINDER == 3 or contact.S_LAST_ROW %}
