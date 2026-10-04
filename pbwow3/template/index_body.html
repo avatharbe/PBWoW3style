@@ -51,12 +51,6 @@
 
 {% EVENT index_body_stat_blocks_after %}
 
-{% if RECENT_TOPICS_DISPLAY %}
-{% if ADS_INDEX_CODE and not S_IS_BOT and definition.ADSIDE eq false %}
-<div class="misc-block advertisement">{{ ADS_INDEX_CODE }}</div>
-{% endif %}
-{% endif %}
-
 <div class="clear"></div>
 
 {% INCLUDE 'overall_footer.html' %}
