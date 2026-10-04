@@ -77,6 +77,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - Fixed the contact icons in the post profile dropdown (private message, email, website, ...), which showed up blank in pbwow3. (#44)
 - Removed the empty `videobg.html` from pbwow3. The footer now includes it only when a sub-style provides one. In pbwow3_overwatch and pbwow3_wildstar the file stays, with a comment: it deliberately switches off the video they would otherwise inherit from pbwow3_heroes. (#46)
 - Moved the style's JavaScript (collapsible boxes, anchor offset below the top bar, video background sizing and the mini-profile menus) from inline code in `overall_footer.html` into `template/pbwow3.js`, so browsers can cache it. Nothing changes in how it behaves. (#47)
+- The `?v=` version strings on the stylesheet imports now equal the style version (3.3.22 for pbwow3, 3.3.20 for pbwow3_heroes and pbwow3_overwatch), so browsers fetch the new CSS after an upgrade instead of keeping a cached copy. (#48)
 - Removed `overall_header_old.html` from pbwow3_diablo: an unused backup copy of `overall_header.html` that phpBB never loaded. (#51)
 
 3.3.21 (28-09-2026)
@@ -237,7 +238,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 ## Development
 The repository includes lint tooling for all styles in it. With Node.js 24:
 
-- `npm ci`, then `npm run lint` checks the theme CSS of every style with stylelint and the templates with a phpBB-specific checker (legacy syntax, `DEFINE`, extension-owned variables). GitHub Actions runs the same on every pull request.
+- `npm ci`, then `npm run lint` checks the theme CSS of every style with stylelint and the templates with a phpBB-specific checker (legacy syntax, `DEFINE`, extension-owned variables). It also checks that every `?v=` string in the theme CSS equals the style's `style_version`, so a version bump has to update them too. GitHub Actions runs the same on every pull request.
 - `npm run validate` checks rendered pages of a running board with the W3C Nu HTML Checker. Set `BOARD_URL` to the board root, and `STYLE_ID` to force a style while *Override user style* is off. Run it once per style.
 
 ## License

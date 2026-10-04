@@ -4,9 +4,10 @@
 	"description": "Development tooling for the PBWoW3 phpBB style and its sub-styles. Not part of any style package.",
 	"license": "GPL-2.0-only",
 	"scripts": {
-		"lint": "npm run lint:css && npm run lint:templates",
+		"lint": "npm run lint:css && npm run lint:templates && npm run lint:versions",
 		"lint:css": "stylelint \"pbwow3*/theme/**/*.css\"",
 		"lint:templates": "node lint/lint-templates.mjs",
+		"lint:versions": "node lint/lint-versions.mjs",
 		"validate": "node lint/validate-pages.mjs"
 	},
 	"devDependencies": {
