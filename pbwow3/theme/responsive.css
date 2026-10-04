@@ -119,21 +119,6 @@
 }
 
 @media (max-width: 700px) {
-	.responsive-hide {
-		display: none !important;
-	}
-
-	.responsive-show {
-		display: block !important;
-	}
-
-	.responsive-show-inline {
-		display: inline !important;
-	}
-
-	.responsive-show-inline-block {
-		display: inline-block !important;
-	}
 
 	/* Content wrappers
 	----------------------------------------*/
@@ -227,9 +212,6 @@
 
 	/* Search
 	----------------------------------------*/
-	.responsive-search {
-		display: block !important;
-	}
 
 	.responsive-search a {
 		display: block;
@@ -263,12 +245,7 @@
 	}
 
 	ul.topiclist li.header dt, ul.topiclist li.header dt .list-inner {
-		margin-right: 0 !important;
 		padding-right: 0;
-	}
-
-	ul.topiclist li.header dd {
-		display: none !important;
 	}
 
 	ul.topiclist dt, ul.topiclist dt .list-inner,
@@ -342,10 +319,6 @@
 		margin: 5px 0 0;
 	}
 
-	.row .pagination .ellipsis + li {
-		display: none !important;
-	}
-
 	/* Responsive tables
 	----------------------------------------*/
 	table.responsive, table.responsive tbody, table.responsive tr, table.responsive td {
@@ -358,8 +331,6 @@
 
 	table.responsive.show-header thead, table.responsive.show-header th:first-child {
 		display: block;
-		width: auto !important;
-		text-align: left !important;
 	}
 
 	table.responsive.show-header th:first-child span.rank-img {
@@ -371,17 +342,7 @@
 	}
 
 	table.responsive td {
-		width: auto !important;
-		text-align: left !important;
 		padding: 4px;
-	}
-
-	table.responsive td.empty {
-		display: none !important;
-	}
-
-	table.responsive td > dfn {
-		display: inline-block !important;
 	}
 
 	table.responsive td > dfn:after {
@@ -416,13 +377,11 @@
 	}
 
 	dl.pmlist dt {
-		width: auto !important;
 		margin-bottom: 5px;
 	}
 
 	dl.pmlist dd {
 		display: inline-block;
-		margin-left: 0 !important;
 	}
 
 	dl.pmlist dd:first-of-type {
@@ -451,6 +410,7 @@
 		margin-right: 2px;
 	}
 
+	/* !important is needed: phpBB's core.js writes style="display: block" on these links. */
 	.colour-palette a {
 		display: inline-block !important;
 	}
@@ -526,7 +486,7 @@
 	}
 
 	.responsive-search a {
-		padding: 0 4px !important;
+		padding: 0 4px;
 		height: auto;
 		width: auto;
 		overflow: inherit;
@@ -537,14 +497,25 @@
 	----------------------------------------*/
 	.postbody {
 		position: static;
-		background: none !important;
 		text-align: left;
 	}
 
 	.postprofile
 	{
-		background: none !important;
 		text-align: left;
+	}
+
+	/* Small screens drop the post and profile backgrounds. #page-body outranks the post-rank
+	 * classes (.bg1, .blizz, .propass, ...) in custom.css and in extensions such as Rank Post
+	 * Styling, which load after this file. */
+	#page-body .postbody,
+	#page-body .postprofile,
+	#page-body .postprofile .avatar-container {
+		background: none;
+	}
+
+	#page-body .postprofile .avatar:after {
+		display: none;
 	}
 
 	.postprofile, .postbody, .search .postbody {
@@ -577,7 +548,6 @@
 	}
 
 	.postprofile .avatar-container {
-		background: none !important;
 		margin: 0;
 		min-height: inherit;
 		padding: 0;
@@ -605,13 +575,7 @@
 	}
 
 	.postprofile .avatar img {
-		width: auto !important;
-		height: auto !important;
 		max-height: 32px;
-	}
-
-	.postprofile .avatar:after {
-		display: none !important;
 	}
 
 	.profile-context .dropdown {
@@ -619,6 +583,7 @@
 		top: 50px;
 	}
 
+	/* !important is needed: colours.css sets .post .postbody h3 { margin-left: 10px !important; }. */
 	.has-profile .postbody h3 {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
@@ -703,23 +668,6 @@
 
 	.captcha-panel dd.captcha-image img {
 		width: 100%;
-	}
-
-	#recaptcha_challenge_image,
-	#recaptcha_response_field,
-	.recaptchatable #recaptcha_image {
-		width: 100% !important;
-		height: auto !important;
-	}
-
-	.recaptchatable tr td:last-child {
-		display: none;
-	}
-
-	.captcha-panel .recaptcha-responsive {
-		display: inline-block !important;
-		margin-top: 10px;
-		vertical-align: middle;
 	}
 
 	#page-header .navbar {
