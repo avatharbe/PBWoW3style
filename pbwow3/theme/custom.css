@@ -11,8 +11,6 @@ Some defaults are included, like on PBWoW.com
 .bg2 .postprofile { background-image: url("./images/avatar-bg2.gif"); }
 .blizz .bg1 .postprofile { background-image: url("./images/avatar-bg1-blizz.gif"); }
 .blizz .bg2 .postprofile { background-image: url("./images/avatar-bg2-blizz.gif"); }
-.red .bg1 .postprofile { background-image: url("./images/avatar-bg1-red.jpg"); }
-.red .bg2 .postprofile { background-image: url("./images/avatar-bg2-red.jpg"); }
 
 .propass .postprofile .avatar {
    overflow: visible;
@@ -158,23 +156,6 @@ Some defaults are included, like on PBWoW.com
 .small-icon.icon-dkp > a:before			{ content: '\f091'; }
 .small-icon.icon-custom1 > a:before		{ content: '\f004'; }
 .small-icon.icon-custom2 > a:before		{ content: '\f164'; }
-
-
-/* Other stuff
---------------------------------------------- */
-
-.donate-button {
-	background: url('./images/donate.jpg') no-repeat 0 0;
-	display: block;
-	width: 300px;
-	height: 220px;
-	padding: 0;
-	margin: 0 auto;
-}
-
-.donate-button:hover {
-	background-position: 0 -220px;
-}
 
 
 /* bbGuild player-detail panes (Character Info/Professions/Mythic+/
