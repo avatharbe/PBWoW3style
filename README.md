@@ -8,7 +8,7 @@ The style is built as a child of **prosilver**. It keeps phpBB's standard markup
 
 This folder holds the **base style**. Twelve themed sub-styles in this repository build on it, so PBWoW3 must be installed before any of them.
 
-- **Version:** 3.3.21 (28-09-2026)
+- **Version:** 3.3.22 (04-10-2026)
 - **Authors:** PayBas (2015) and @Sajaki (since 2017)
 - **Live demo:** https://www.avathar.be/demoforum/app.php/guild
 
@@ -67,6 +67,11 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - https://www.phpbb.com/customise/db/style/pbwow3/support
 
 ## Changes
+3.3.22 (04-10-2026)
+
+- The custom header links from the pbWoW extension are no longer printed by the style itself. pbwowext 3.3.3 renders them through a template event, so update the extension together with this style, or the links disappear. (#35)
+- Removed a leftover Recent Topics advertisement block from the bottom of the board index. Recent Topics renders its ad itself and limits it to the Side location; the style's copy only showed an ad in the top or bottom location, against that setting. (#36)
+
 3.3.21 (28-09-2026)
 
 - Fixed the breadcrumb structured data, which Google Search Console reported as invalid. Breadcrumb links no longer declare their own schema.org item, so each crumb now supplies its own URL and the breadcrumbs are eligible for rich results again. (#33)
