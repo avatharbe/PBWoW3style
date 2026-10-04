@@ -227,6 +227,12 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - Added theme images for the pbWoW Core Theme.
 - Fixed avatar positioning.
 
+## Development
+The repository includes lint tooling for all styles in it. With Node.js 24:
+
+- `npm ci`, then `npm run lint` checks the theme CSS of every style with stylelint and the templates with a phpBB-specific checker (legacy syntax, `DEFINE`, extension-owned variables). GitHub Actions runs the same on every pull request.
+- `npm run validate` checks rendered pages of a running board with the W3C Nu HTML Checker. Set `BOARD_URL` to the board root, and `STYLE_ID` to force a style while *Override user style* is off. Run it once per style.
+
 ## License
 
 [GNU General Public License v2](http://opensource.org/licenses/gpl-2.0.php)

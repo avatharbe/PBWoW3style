@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  push:
+    branches: [develop33]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      # vnu-jar is optional: HTML validation needs a running board, so CI skips its Java download.
+      - run: npm ci --omit=optional
+      - run: npm run lint

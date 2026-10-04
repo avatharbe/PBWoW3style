@@ -1,0 +1,10 @@
+# Keep repository-only files out of `git archive` exports, so a package built
+# from a release tag contains the styles and nothing else.
+.gitignore         export-ignore
+.gitattributes     export-ignore
+.github/           export-ignore
+.editorconfig      export-ignore
+.stylelintrc.json  export-ignore
+package.json       export-ignore
+package-lock.json  export-ignore
+lint/              export-ignore
