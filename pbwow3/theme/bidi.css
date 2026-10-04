@@ -3,13 +3,6 @@
 
 /* Main blocks
 ---------------------------------------- */
-.rtl .navigation a {
-	border: #222;
-	color: #999;
-	background: #212121;
-	background: rgba(40,40,40,0.7) linear-gradient(to left, rgba(0,0,0,0.6) 0,rgba(0,0,0,0) 100px);
-}
-
 .rtl .index-left {
 	margin-left: 312px;
 	margin-right: 0;

@@ -19,10 +19,10 @@
 		"property-no-unknown": true,
 		"selector-pseudo-class-no-unknown": true,
 		"selector-pseudo-element-no-unknown": true,
+		"selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
 		"string-no-newline": true,
 		"unit-no-unknown": true,
 
-		"selector-type-no-unknown": [true, { "severity": "warning", "ignore": ["custom-elements"] }],
 		"declaration-block-no-duplicate-properties": [true, { "severity": "warning", "ignore": ["consecutive-duplicates-with-different-syntaxes"] }],
 		"declaration-block-no-shorthand-property-overrides": [true, { "severity": "warning" }],
 		"declaration-no-important": [true, { "severity": "warning" }],
