@@ -21,6 +21,7 @@ Authors: @Paybas and @Sajaki
 - Removed the empty `videobg.html` from pbwow3. The footer now includes it only when a sub-style provides one. In pbwow3_overwatch and pbwow3_wildstar the file stays, with a comment: it deliberately switches off the video they would otherwise inherit from pbwow3_heroes. (#46)
 - Moved the style's JavaScript (collapsible boxes, anchor offset below the top bar, video background sizing and the mini-profile menus) from inline code in `overall_footer.html` into `template/pbwow3.js`, so browsers can cache it. Nothing changes in how it behaves. (#47)
 - The `?v=` version strings on the stylesheet imports now equal the style version (3.3.22 for pbwow3, 3.3.20 for pbwow3_heroes and pbwow3_overwatch), so browsers fetch the new CSS after an upgrade instead of keeping a cached copy. (#48)
+- Removed `overall_header_old.html` from pbwow3_diablo: an unused backup copy of `overall_header.html` that phpBB never loaded. (#51)
 
 3.3.21 (28-09-2026)
 
