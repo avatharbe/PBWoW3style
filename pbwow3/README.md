@@ -26,6 +26,7 @@ Authors: @Paybas and @Sajaki
 - Removed an empty `.postprofile .avatar` rule from `content.css`. The seven empty rules in pbwow3_heroes, pbwow3_overwatch and pbwow3_wildstar are removed in the repository too, and ship with those styles' next release. (#40)
 - Fixed the UCP and MCP side menu on right-to-left boards: its gradient now runs the mirrored way and the hover highlight works again. A selector was missing its class dot, and a leftover rule in `bidi.css` overrode both. (#39)
 - Fixed the same right-to-left side-menu override in pbwow3_heroes's `bidi.css`, which also affected pbwow3_overwatch and pbwow3_wildstar. It is fixed in the repository and ships with those styles' next release. (#65)
+- Fixed pbwow3_legion showing pbwow3's gold frame corners and breadcrumb underline instead of its own green ones: its rules still targeted the old `#body-header` id. Fixed in the repository; ships with pbwow3_legion's next release. (#67)
 
 3.3.21 (28-09-2026)
 
