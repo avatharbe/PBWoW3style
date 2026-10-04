@@ -7,12 +7,18 @@ https://en.wikipedia.org/wiki/WildStar_(video_game)
 Author @Paybas, @Sajaki
 
 ## requirements
-- pbWow and Heroes 3.3.20 Base style
+- pbWow and Heroes 3.3.22 Base style
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
 
 ## Changes
+3.3.22 (04-10-2026)
+
+- replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
+- removed empty CSS rules from extensions.css; nothing changes on screen (#40)
+- fixed the UCP and MCP side menu on right-to-left boards: a leftover rule in pbwow3_heroes's bidi.css overrode the mirrored gradient and the hover highlight (#65)
+
 3.3.20 (24-09-2026)
 
 - updated for phpBB 3.3.18

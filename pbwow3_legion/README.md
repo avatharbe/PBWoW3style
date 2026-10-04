@@ -6,12 +6,17 @@ World of Warcraft Legion themed style with Illidan video background and custom f
 Author @Sajaki
 
 ## requirements
-- pbWoW 3.3.20 Base style
+- pbWoW 3.3.22 Base style
 
 ## Support
 - https://www.avathar.be/forum/viewforum.php?f=82
 
 ## Changes
+3.3.22 (04-10-2026)
+
+- replaced the legacy `eq` comparison in overall_header.html with Twig `==`; renders as before (#41)
+- fixed the breadcrumb bar showing pbwow3's gold frame corners and crumb underline instead of legion's green ones: its rules targeted the old `#body-header` id (#67)
+
 3.3.20 (24-09-2026)
 
 - updated for phpBB 3.3.18
