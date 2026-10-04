@@ -76,6 +76,7 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - Fixed the navigation bar writing two `class` attributes on pages without the search box. The second one was ignored, so the `no-search` styling never applied; the bar now shows its intended left corner there. (#43)
 - Fixed the contact icons in the post profile dropdown (private message, email, website, ...), which showed up blank in pbwow3. (#44)
 - Removed the empty `videobg.html` from pbwow3. The footer now includes it only when a sub-style provides one. In pbwow3_overwatch and pbwow3_wildstar the file stays, with a comment: it deliberately switches off the video they would otherwise inherit from pbwow3_heroes. (#46)
+- Moved the style's JavaScript (collapsible boxes, anchor offset below the top bar, video background sizing and the mini-profile menus) from inline code in `overall_footer.html` into `template/pbwow3.js`, so browsers can cache it. Nothing changes in how it behaves. (#47)
 
 3.3.21 (28-09-2026)
 
