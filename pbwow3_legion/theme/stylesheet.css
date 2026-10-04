@@ -6,12 +6,12 @@
     --------------------------------------------------------------
 */
 
-@import url("common.css");
-@import url("links.css");
-@import url("colours.css");
-@import url("forms.css");
-@import url("buttons.css");
-@import url("imageset.css");
+@import url("common.css?v=3.3.22");
+@import url("links.css?v=3.3.22");
+@import url("colours.css?v=3.3.22");
+@import url("forms.css?v=3.3.22");
+@import url("buttons.css?v=3.3.22");
+@import url("imageset.css?v=3.3.22");
 
 /* PBWoW Legion style specific assets (overall_header {T_THEME_NAME}
 --------------------------------------------- */

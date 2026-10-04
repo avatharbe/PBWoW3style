@@ -6,12 +6,12 @@
     --------------------------------------------------------------
 */
 
-@import url("common.css?hash=a9741ba1");
-@import url("links.css?hash=cbeb92cc");
-@import url("forms.css?hash=b64464fb");
-@import url("content.css?hash=56f9e623");
-@import url("colours.css?hash=fcb2f289");
-@import url("extensions.css?hash=07db3f81");
+@import url("common.css?v=3.3.22");
+@import url("links.css?v=3.3.22");
+@import url("forms.css?v=3.3.22");
+@import url("content.css?v=3.3.22");
+@import url("colours.css?v=3.3.22");
+@import url("extensions.css?v=3.3.22");
 
 body.pbwow3 .logo {
 	background: url("./images/logo.png") no-repeat 50% 0;
