@@ -9,13 +9,13 @@
 {% if SEARCH_TOPIC %}
 	<p class="return-link">
 		<a class="arrow-{{ S_CONTENT_FLOW_BEGIN }}" href="{{ U_SEARCH_TOPIC }}">
-			<i class="icon fa-angle-{{ S_CONTENT_FLOW_BEGIN }} fa-fw icon-black" aria-hidden="true"></i><span>{{ lang('RETURN_TO_TOPIC') }}</span>
+			{{ Icon('font', 'angle-' ~ S_CONTENT_FLOW_BEGIN, lang('RETURN_TO_TOPIC'), false, 'fas c-return-arrow-icon') }}
 		</a>
 	</p>
 {% else %}
 	<p class="advanced-search-link">
 		<a class="arrow-{{ S_CONTENT_FLOW_BEGIN }}" href="{{ U_SEARCH }}" title="{{ lang('SEARCH_ADV') }}">
-			<i class="icon fa-angle-{{ S_CONTENT_FLOW_BEGIN }} fa-fw icon-black" aria-hidden="true"></i><span>{{ lang('GO_TO_SEARCH_ADV') }}</span>
+			{{ Icon('font', 'angle-' ~ S_CONTENT_FLOW_BEGIN, lang('GO_TO_SEARCH_ADV'), false, 'fas c-return-arrow-icon') }}
 		</a>
 	</p>
 {% endif %}
@@ -31,10 +31,10 @@
 			<fieldset>
 				<input class="inputbox search tiny" type="search" name="add_keywords" id="add_keywords" value="" placeholder="{{ lang('SEARCH_IN_RESULTS') }}" />
 				<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
-					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+					{{ Icon('font', 'search', lang('SEARCH'), true, 'fas c-button-icon') }}
 				</button>
 				<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
-					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
+					{{ Icon('font', 'gear', lang('SEARCH_ADV'), true, 'fas c-button-icon') }}
 				</a>
 			</fieldset>
 			</form>
@@ -84,23 +84,23 @@
 							{% EVENT topiclist_row_prepend %}
 							{% if searchresults.U_NEWEST_POST and searchresults.S_UNREAD_TOPIC and not S_IS_BOT %}
 								<a class="unread" href="{{ searchresults.U_NEWEST_POST }}">
-									<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{{ lang('NEW_POST') }}</span>
+									{{ Icon('font', 'file', lang('NEW_POST'), true, 'fas c-topic-unread-icon') }}
 								</a>
 							{% endif %}
 							{% if searchresults.U_VIEW_TOPIC %}<a href="{{ searchresults.U_VIEW_TOPIC }}" class="topictitle">{{ searchresults.TOPIC_TITLE }}</a>{% else %}{{ searchresults.TOPIC_TITLE }}{% endif %}
 							{% if searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED %}
 								<a href="{{ searchresults.U_MCP_QUEUE }}" title="{{ lang('TOPIC_UNAPPROVED') }}">
-									<i class="icon fa-question fa-fw icon-blue" aria-hidden="true"></i><span class="sr-only">{{ lang('TOPIC_UNAPPROVED') }}</span>
+									{{ Icon('font', 'circle-question', lang('TOPIC_UNAPPROVED'), true, 'fas c-unapproved-icon') }}
 								</a>
 							{% endif %}
 							{% if searchresults.S_TOPIC_DELETED %}
 								<a href="{{ searchresults.U_MCP_QUEUE }}" title="{{ lang('TOPIC_DELETED') }}">
-									<i class="icon fa-recycle fa-fw icon-green" aria-hidden="true"></i><span class="sr-only">{{ lang('TOPIC_DELETED') }}</span>
+									{{ Icon('font', 'recycle', lang('TOPIC_DELETED'), true, 'fas c-topic-deleted-icon') }}
 								</a>
 							{% endif %}
 							{% if searchresults.S_TOPIC_REPORTED %}
 								<a href="{{ searchresults.U_MCP_REPORT }}" title="{{ lang('TOPIC_REPORTED') }}">
-									<i class="icon fa-exclamation fa-fw icon-red" aria-hidden="true"></i><span class="sr-only">{{ lang('TOPIC_REPORTED') }}</span>
+									{{ Icon('font', 'triangle-exclamation', lang('TOPIC_REPORTED'), true, 'fas c-topic-reported-icon') }}
 								</a>
 							{% endif %}
 							<br />
@@ -115,8 +115,8 @@
 							{% endif %}
 
 							<div class="responsive-hide left-box">
-								{% if searchresults.S_HAS_POLL %}<i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>{% endif %}
-								{% if searchresults.ATTACH_ICON_IMG %}<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>{% endif %}
+								{% if searchresults.S_HAS_POLL %}{{ Icon('font', 'chart-bar', '', true) }}{% endif %}
+								{% if searchresults.ATTACH_ICON_IMG %}{{ Icon('font', 'paperclip', '', true) }}{% endif %}
 								{% EVENT topiclist_row_topic_by_author_before %}
 								{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_topic_author_username_prepend %}{{ searchresults.TOPIC_AUTHOR_FULL }}{% EVENT search_results_topic_author_username_append %} &raquo; <time datetime="{{ searchresults.FIRST_POST_TIME_RFC3339 }}">{{ searchresults.FIRST_POST_TIME }}</time> &raquo; {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
 								{% EVENT topiclist_row_topic_by_author_after %}
@@ -124,14 +124,14 @@
 
 							{% if searchresults.pagination|length %}
 							<div class="pagination">
-								<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+								<span>{{ Icon('font', 'clone', '', true, 'far') }}</span>
 								<ul>
 								{% for pagination in searchresults.pagination %}
 									{% if pagination.S_IS_PREV %}
 									{% elseif pagination.S_IS_CURRENT %}<li class="active"><span>{{ pagination.PAGE_NUMBER }}</span></li>
 									{% elseif pagination.S_IS_ELLIPSIS %}<li class="ellipsis"><span>{{ lang('ELLIPSIS') }}</span></li>
 									{% elseif pagination.S_IS_NEXT %}
-									{% else %}<li><a class="button" href="{{ pagination.PAGE_URL }}">{{ pagination.PAGE_NUMBER }}</a></li>
+									{% else %}<li><a class="button" href="{{ pagination.PAGE_URL }}" role="button">{{ pagination.PAGE_NUMBER }}</a></li>
 									{% endif %}
 								{% endfor %}
 								</ul>
@@ -147,7 +147,7 @@
 						<span><dfn>{{ lang('LAST_POST') }} </dfn>{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_last_post_author_username_prepend %}{{ searchresults.LAST_POST_AUTHOR_FULL }}{% EVENT search_results_last_post_author_username_append %}
 							{% if not S_IS_BOT and searchresults.U_LAST_POST %}
 								<a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">
-									<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{{ VIEW_LATEST_POST }}</span>
+									{{ Icon('font', 'arrow-up-right-from-square', VIEW_LATEST_POST, true, 'fas c-last-post-icon') }}
 								</a>
 							{% endif %}
 							<br /><time datetime="{{ searchresults.LAST_POST_TIME_RFC3339 }}">{{ searchresults.LAST_POST_TIME }}</time>
@@ -187,7 +187,7 @@
 			<dt class="author">{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_post_author_username_prepend %}{{ searchresults.POST_AUTHOR_FULL }}{% EVENT search_results_post_author_username_append %}</dt>
 			<dd class="search-result-date">{{ searchresults.POST_DATE }}</dd>
 			<dd>{{ lang('FORUM') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a></dd>
-			<dd>{{ lang('TOPIC') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_TOPIC }}">{{ searchresults.TOPIC_TITLE }}</a></dd>
+			<dd>{{ lang('TOPIC') }}{{ lang('COLON') }} {% EVENT search_results_topic_title_prepend %}<a href="{{ searchresults.U_VIEW_TOPIC }}">{{ searchresults.TOPIC_TITLE }}</a>{% EVENT search_results_topic_title_append %}</dd>
 			{% EVENT search_results_topic_title_after %}
 			<dd>{{ lang('REPLIES') }}{{ lang('COLON') }} <strong>{{ searchresults.TOPIC_REPLIES }}</strong></dd>
 			<dd>{{ lang('VIEWS') }}{{ lang('COLON') }} <strong>{{ searchresults.TOPIC_VIEWS }}</strong></dd>
@@ -206,7 +206,7 @@
 		<ul class="searchresults">
 			<li>
 				<a href="{{ searchresults.U_VIEW_POST }}" class="arrow-{{ S_CONTENT_FLOW_END }}">
-					<i class="icon fa-angle-{{ S_CONTENT_FLOW_END }} fa-fw icon-black" aria-hidden="true"></i><span>{{ lang('JUMP_TO_POST') }}</span>
+					{{ Icon('font', 'angle-' ~ S_CONTENT_FLOW_END, lang('JUMP_TO_POST'), false, 'fas c-return-arrow-icon') }}
 				</a>
 			</li>
 		</ul>
