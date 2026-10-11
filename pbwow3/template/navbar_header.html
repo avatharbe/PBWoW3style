@@ -1,9 +1,9 @@
 <div class="navblock" role="navigation">
 	<div class="inner">
 	<ul id="nav-main" class="nav-main linklist" role="menubar">
-		<li id="quick-links" class="quick-links dropdown-container responsive-menu{% if not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH %} hidden{% endif %}" data-skip-responsive="true">
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu{% if not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH %} hidden{% endif %}">
 			<a href="#" class="dropdown-trigger">
-				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>{{ lang('QUICK_LINKS') }}</span>
+				{{ Icon('font', 'bars', lang('QUICK_LINKS'), false) }}
 			</a>
 			<div class="dropdown">
 				<div class="pointer"><div class="pointer-inner"></div></div>
@@ -15,38 +15,45 @@
 						{% if S_REGISTERED_USER %}
 						<li>
 							<a href="{{ U_SEARCH_SELF }}" role="menuitem">
-								<i class="icon fa-user fa-fw icon-gray" aria-hidden="true"></i><span>{{ lang('SEARCH_SELF') }}</span>
+								{{ Icon('font', 'user', lang('SEARCH_SELF'), false, 'fas icon icon-gray') }}
 							</a>
 						</li>
 						{% endif %}
 						{% if S_USER_LOGGED_IN %}
 						<li>
 							<a href="{{ U_SEARCH_NEW }}" role="menuitem">
-								<i class="icon fa-flash fa-fw icon-red" aria-hidden="true"></i><span>{{ lang('SEARCH_NEW') }}</span>
+								{{ Icon('font', 'bolt', lang('SEARCH_NEW'), false, 'fas icon icon-red') }}
 							</a>
 						</li>
 						{% endif %}
 						{% if S_LOAD_UNREADS %}
 						<li>
 							<a href="{{ U_SEARCH_UNREAD }}" role="menuitem">
-								<i class="icon fa-eye fa-fw icon-red" aria-hidden="true"></i><span>{{ lang('SEARCH_UNREAD') }}</span>
+								{{ Icon('font', 'eye', lang('SEARCH_UNREAD'), false, 'fas icon icon-red') }}
 							</a>
 						</li>
 						{% endif %}
 						<li>
 							<a href="{{ U_SEARCH_UNANSWERED }}" role="menuitem">
-								<i class="icon fa-child fa-fw icon-gray" aria-hidden="true"></i><span>{{ lang('SEARCH_UNANSWERED') }}</span>
+								{{ Icon('font', 'child', lang('SEARCH_UNANSWERED'), false, 'fas icon icon-gray') }}
 							</a>
 						</li>
 						<li>
 							<a href="{{ U_SEARCH_ACTIVE_TOPICS }}" role="menuitem">
-								<i class="icon fa-comments-o fa-fw icon-blue" aria-hidden="true"></i><span>{{ lang('SEARCH_ACTIVE_TOPICS') }}</span>
+								{{ Icon('font', 'comments', lang('SEARCH_ACTIVE_TOPICS'), false, 'far icon icon-blue') }}
 							</a>
 						</li>
+						{% if U_MARK_FORUMS %}
+						<li>
+							<a href="{{ U_MARK_FORUMS }}" role="menuitem" accesskey="m" data-ajax="mark_forums_read">
+								{{ Icon('font', 'book-open-reader', lang('MARK_FORUMS_READ'), false) }}
+							</a>
+						</li>
+						{% endif %}
 						<li class="separator"></li>
 						<li>
 							<a href="{{ U_SEARCH }}" role="menuitem">
-								<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>{{ lang('SEARCH') }}</span>
+								{{ Icon('font', 'search', lang('SEARCH'), false) }}
 							</a>
 						</li>
 					{% endif %}
@@ -57,14 +64,14 @@
 						{% if S_DISPLAY_MEMBERLIST %}
 						<li>
 							<a href="{{ U_MEMBERLIST }}" role="menuitem">
-								<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{{ lang('MEMBERLIST') }}</span>
+								{{ Icon('font', 'users', lang('MEMBERLIST'), false) }}
 							</a>
 						</li>
 						{% endif %}
 						{% if U_TEAM %}
 						<li>
 							<a href="{{ U_TEAM }}" role="menuitem">
-								<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{{ lang('THE_TEAM') }}</span>
+								{{ Icon('font', 'shield-halved', lang('THE_TEAM'), false) }}
 							</a>
 						</li>
 						{% endif %}
@@ -80,18 +87,21 @@
 
 	{% if S_REGISTERED_USER %}
 		{% EVENT navbar_header_user_profile_prepend %}
-		<li id="username_logged_in" class="rightside {% if CURRENT_USER_AVATAR %} no-bulletin{% endif %}" data-skip-responsive="true">
+		<li id="username_logged_in" class="rightside {% if CURRENT_USER_AVATAR %} no-bulletin{% endif %}">
 			{% EVENT navbar_header_username_prepend %}
 			<div class="header-profile dropdown-container">
-				<a href="{{ U_PROFILE }}" class="header-avatar dropdown-trigger">{% if CURRENT_USER_AVATAR %}{{ CURRENT_USER_AVATAR }} {% endif %}{{ CURRENT_USERNAME_SIMPLE }}</a>
-				<div class="dropdown hidden">
+				<a href="{{ U_PROFILE }}" class="header-avatar dropdown-trigger">
+					{% if CURRENT_USER_AVATAR %}{% include 'avatar.html' with {'avatar_data': CURRENT_USER_AVATAR} only %} {% endif %}
+					{{ CURRENT_USERNAME_SIMPLE }}
+				</a>
+				<div class="dropdown">
 					<div class="pointer"><div class="pointer-inner"></div></div>
 					<ul class="dropdown-contents" role="menu">
 
 						{% if U_RESTORE_PERMISSIONS %}
 						<li>
 							<a href="{{ U_RESTORE_PERMISSIONS }}">
-								<i class="icon fa-refresh fa-fw" aria-hidden="true"></i><span>{{ lang('RESTORE_PERMISSIONS') }}</span>
+								{{ Icon('font', 'rotate', lang('RESTORE_PERMISSIONS'), false) }}
 							</a>
 						</li>
 						{% endif %}
@@ -100,13 +110,13 @@
 
 						<li>
 							<a href="{{ U_PROFILE }}" title="{{ lang('PROFILE') }}" role="menuitem">
-								<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{{ lang('PROFILE') }}</span>
+								{{ Icon('font', 'sliders', lang('PROFILE'), false) }}
 							</a>
 						</li>
 						{% if U_USER_PROFILE %}
 						<li>
 							<a href="{{ U_USER_PROFILE }}" title="{{ lang('READ_PROFILE') }}" role="menuitem">
-								<i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{{ lang('READ_PROFILE') }}</span>
+								{{ Icon('font', 'user', lang('READ_PROFILE'), false) }}
 							</a>
 						</li>
 						{% endif %}
@@ -117,7 +127,7 @@
 
 						<li>
 							<a href="{{ U_LOGIN_LOGOUT }}" title="{{ lang('LOGIN_LOGOUT') }}" accesskey="x" role="menuitem">
-								<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{{ lang('LOGIN_LOGOUT') }}</span>
+								{{ Icon('font', 'power-off', lang('LOGIN_LOGOUT'), false) }}
 							</a>
 						</li>
 
@@ -127,16 +137,16 @@
 			{% EVENT navbar_header_username_append %}
 		</li>
 		{% if S_DISPLAY_PM %}
-			<li class="rightside" data-skip-responsive="true">
+			<li class="rightside">
 				<a href="{{ U_PRIVATEMSGS }}" role="menuitem">
-					<i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>{{ lang('PRIVATE_MESSAGES') }} </span><strong class="badge{% if not PRIVATE_MESSAGE_COUNT %} hidden{% endif %}">{{ PRIVATE_MESSAGE_COUNT }}</strong>
+					{{ Icon('font', 'inbox', lang('PRIVATE_MESSAGES'), false) }} <strong class="badge{% if not PRIVATE_MESSAGE_COUNT %} hidden{% endif %}">{{ PRIVATE_MESSAGE_COUNT }}</strong>
 				</a>
 			</li>
 		{% endif %}
 		{% if S_NOTIFICATIONS_DISPLAY %}
-		<li class="dropdown-container dropdown-{{ S_CONTENT_FLOW_END }} rightside" data-skip-responsive="true">
-			<a href="{{ U_VIEW_ALL_NOTIFICATIONS }}" id="notification_list_button" class="dropdown-trigger">
-				<i class="icon fa-bell fa-fw" aria-hidden="true"></i><span>{{ lang('NOTIFICATIONS') }} </span><strong class="badge{% if not NOTIFICATIONS_COUNT %} hidden{% endif %}">{{ NOTIFICATIONS_COUNT }}</strong>
+		<li class="dropdown-container dropdown-{{ S_CONTENT_FLOW_END }} rightside">
+			<a href="{{ U_VIEW_ALL_NOTIFICATIONS }}" id="notification-button" class="dropdown-trigger">
+				{{ Icon('font', 'bell', lang('NOTIFICATIONS'), false) }} <strong class="badge{% if not NOTIFICATIONS_COUNT %} hidden{% endif %}">{{ NOTIFICATIONS_COUNT }}</strong>
 			</a>
 			{% INCLUDE 'notification_dropdown.html' %}
 		</li>
@@ -147,15 +157,15 @@
 	<ul class="linklist" role="menubar">
 	{% endif %}
 		{% if not S_USER_LOGGED_IN and not S_IS_BOT %}
-			<li class="rightside"  data-skip-responsive="true">
+			<li class="rightside">
 				<a href="{{ U_LOGIN_LOGOUT }}" title="{{ lang('LOGIN_LOGOUT') }}" accesskey="x" role="menuitem">
-					<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{{ lang('LOGIN_LOGOUT') }}</span>
+					{{ Icon('font', 'power-off', lang('LOGIN_LOGOUT'), false) }}
 				</a>
 			</li>
 			{% if S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) %}
-			<li class="rightside" data-skip-responsive="true">
+			<li class="rightside">
 				<a href="{{ U_REGISTER }}" role="menuitem">
-					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>{{ lang('REGISTER') }}</span>
+					{{ Icon('font', 'pen-to-square', lang('REGISTER'), false) }}
 				</a>
 			</li>
 			{% endif %}
@@ -163,24 +173,24 @@
 		{% endif %}
 
 		{% if U_ACP %}
-		<li data-last-responsive="true" class="rightside"  >
+		<li class="rightside">
 			<a href="{{ U_ACP }}" title="{{ lang('ACP') }}" role="menuitem">
-				<i class="icon fa-gears fa-fw" aria-hidden="true"></i><span>{{ lang('ACP_SHORT') }}</span>
+				{{ Icon('font', 'gears', lang('ACP_SHORT'), false) }}
 			</a>
 		</li>
 		{% endif %}
 		{% if U_MCP %}
-		<li data-last-responsive="true" class="rightside"  >
+		<li class="rightside">
 			<a href="{{ U_MCP }}" title="{{ lang('MCP') }}" role="menuitem">
-				<i class="icon fa-legal fa-fw" aria-hidden="true"></i><span>{{ lang('MCP_SHORT') }}</span>
+				{{ Icon('font', 'gavel', lang('MCP_SHORT'), false) }}
 			</a>
 		</li>
 		{% endif %}
 		{% EVENT overall_header_navigation_append %}
 
-		<li data-last-responsive="true" class="rightside"  >
+		<li class="rightside">
 			<a href="{{ U_FAQ }}" title="{{ lang('FAQ_EXPLAIN') }}" role="menuitem">
-				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{{ lang('FAQ') }}</span>
+				{{ Icon('font', 'question-circle', lang('FAQ'), false) }}
 			</a>
 		</li>
 
