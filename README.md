@@ -1,6 +1,6 @@
-## PBWoW 3 Style for phpBB 3.3.18
+## PBWoW 3 Style for phpBB 4.0
 
-PBWoW 3 is a Blizzard-themed style for phpBB 3.3. It gives a board the look of a World of Warcraft–era community site: framed posts and portrait avatars, gaming-themed headers, and optional animated video backgrounds.
+PBWoW 3 is a Blizzard-themed style for phpBB 4.0. It gives a board the look of a World of Warcraft–era community site: framed posts and portrait avatars, gaming-themed headers, and optional animated video backgrounds.
 
 <img width="2308" height="1538" alt="Screen Shot 2026-09-26 at 15 39 34" src="https://github.com/user-attachments/assets/761345ee-ef25-4ef6-8f03-749491a6b20b" />
 
@@ -8,13 +8,13 @@ The style is built as a child of **prosilver**. It keeps phpBB's standard markup
 
 This folder holds the **base style**. Twelve themed sub-styles in this repository build on it, so PBWoW3 must be installed before any of them.
 
-- **Version:** 3.3.22 (04-10-2026)
+- **Version:** 4.0.0-dev (in development, not yet released). For phpBB 3.3, use PBWoW3 3.3.22 from the `develop33` branch.
 - **Authors:** PayBas (2015) and @Sajaki (since 2017)
 - **Live demo:** https://www.avathar.be/demoforum/app.php/guild
 
 ## Requirements
-- phpBB 3.3.18 or higher
-- pbwowExt (optional; enables the extras listed below)
+- phpBB 4.0 (tested on 4.0.0-a3-dev)
+- pbwowExt (optional; enables the extras listed below). The extras need a phpBB 4.0 release of pbwowExt.
 
 ## Features
 
@@ -59,6 +59,8 @@ Each sub-style overrides only the header, colours, images, fonts and background 
 
 Stylesheets are loaded with the style version in their URL, so browsers fetch the new CSS as soon as the version changes.
 
+Coming from phpBB 3.3: phpBB 4.0 reads a style's details from `composer.json` instead of `style.cfg`, so PBWoW3 3.3.x and its sub-styles do not show up on a 4.0 board. Update the board to phpBB 4.0 first, then replace all PBWoW3 style folders with this version.
+
 ## Designer resources
 The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and French versions of the quick-search graphics.
 
@@ -67,6 +69,24 @@ The `contrib` folder contains a PSD with the PBWoW icons, a game-icon pack, and 
 - https://www.phpbb.com/customise/db/style/pbwow3/support
 
 ## Changes
+4.0.0-dev (unreleased) - phpBB 4.0 port
+
+- Requires phpBB 4.0; phpBB 3.3 boards stay on 3.3.22. All sub-styles are ported together with pbwow3.
+- Added a `composer.json` to pbwow3 and every sub-style and removed `style.cfg`: phpBB 4.0 only lists style folders that contain a `composer.json` (PHPBB-10824), so none of the styles showed up under ACP > Install styles. The display names and parents are unchanged, so sub-styles still find their parent.
+- Replaced every Font Awesome 4 `<i class="icon fa-*">` with phpBB 4.0's `Icon()` Twig function. phpBB 4.0 ships Font Awesome 6 and drops prosilver's `.icon` class, so those icons rendered blank: the header menus, the reply, new topic, search and moderation buttons, the post buttons, the topic list status icons, the breadcrumb home icon, the jumpbox caret and the search result arrows. The post button colours (red delete, orange warn, blue information) now also match the Font Awesome 6 icon names.
+- Avatars are passed to templates as data in phpBB 4.0 and rendered through `avatar.html`. Printing them directly crashed every page for logged-in members (the header avatar) and every topic (post avatars).
+- phpBB 4.0 shows a letter avatar for members without one. In the post profile it now fills the portrait frame as a square tile with a serif initial, instead of prosilver's round badge running over the frame (pbwow3, pbwow3_heroes and the styles based on them). The `.no-avatar` placeholder rules and the `no_avatar.gif` / `avatar-sprite.png` images are removed, as they can no longer show.
+- Contact icons in the post profile use phpBB 4.0's per-type icons; prosilver 4.0 dropped the `.contact-icon` sprites they relied on, so they rendered blank.
+- The post buttons gained prosilver 4.0's responsive menu: phpBB 4.0 hides the plain buttons on narrow screens, so without it they disappeared on phones.
+- The board index online legend is a list of groups in phpBB 4.0 and is now rendered with a loop, as in prosilver; printing it crashed the board index.
+- `navbar_footer.html` now follows prosilver 4.0, with its responsive menu, its new template events and the two-icon "Subscribe forum" toggle.
+- Renamed `navbar.html` to `breadcrumbs.html`, so it replaces prosilver 4.0's breadcrumbs template; every sub-style header includes it under the new name.
+- All headers gained phpBB 4.0's web app meta tags, manifest link and web push include; the footer gained the loading indicator and checks for Font Awesome 6 when falling back from the CDN.
+- Added the `index_body_forumlist_body_before` and `search_results_topic_title_prepend` / `_append` template events, the "Mark forums read" quick link and phpBB 4.0's form button classes.
+- Fixed the forum permissions block on forum pages, which never showed: it tested `rules|length` instead of `loops.rules|length`.
+- Fixed a horizontal scroll on phones in pbwow3_overwatch and pbwow3_wildstar: they turned the navigation bar decoration back on after pbwow3_heroes hides it on small screens, and it ran 10px past the screen edge.
+- The stylesheet import versions are now `?v=4.0.0-dev`, and `lint/lint-versions.mjs` reads the version from `composer.json`.
+
 3.3.22 (04-10-2026)
 
 - All sub-styles are released as 3.3.22 together with pbwow3 and require pbwow3 3.3.22.
