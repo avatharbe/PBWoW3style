@@ -46,7 +46,7 @@
 							<strong>{{ forumrow.L_SUBFORUM_STR }}{{ lang('COLON') }}</strong>
 							{% for subforum in forumrow.subforum %}
 								{% EVENT forumlist_body_subforum_link_prepend %}<a href="{{ subforum.U_SUBFORUM }}" class="subforum{% if subforum.S_UNREAD %} unread{% else %} read{% endif %}" title="{% if subforum.IS_LINK %}{{ lang('FORUM_LINK') }}{% elseif subforum.S_UNREAD %}{{ lang('UNREAD_POSTS') }}{% else %}{{ lang('NO_UNREAD_POSTS') }}{% endif %}">
-								<i class="icon {% if subforum.IS_LINK %}fa-external-link{% else %}fa-file-o{% endif %} fa-fw {% if subforum.S_UNREAD %} icon-red{% else %} icon-blue{% endif %} icon-md" aria-hidden="true"></i><span>{{ subforum.SUBFORUM_NAME }}</span></a>{% EVENT forumlist_body_subforum_link_append %}
+								{% if subforum.IS_LINK %}{{ Icon('font', 'arrow-up-right-from-square', subforum.SUBFORUM_NAME, false, 'fas c-subforum-icon') }}{% else %}{{ Icon('font', 'file', subforum.SUBFORUM_NAME, false, 'far c-subforum-icon') }}{% endif %}</a>{% EVENT forumlist_body_subforum_link_append %}
 							{% endfor %}
 							{% EVENT forumlist_body_subforums_after %}
 							</div>
