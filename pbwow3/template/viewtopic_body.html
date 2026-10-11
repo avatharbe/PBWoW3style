@@ -32,9 +32,9 @@
 	{% if not S_IS_BOT and S_DISPLAY_REPLY_INFO %}
 		<a href="{{ U_POST_REPLY_TOPIC }}" class="button" title="{% if S_IS_LOCKED %}{{ lang('TOPIC_LOCKED') }}{% else %}{{ lang('POST_REPLY') }}{% endif %}">
 			{% if S_IS_LOCKED %}
-				<span>{{ lang('BUTTON_TOPIC_LOCKED') }}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+				<span>{{ lang('BUTTON_TOPIC_LOCKED') }}</span> {{ Icon('font', 'lock', '', true, 'fas c-button-icon') }}
 			{% else %}
-				<span>{{ lang('BUTTON_POST_REPLY') }}</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+				<span>{{ lang('BUTTON_POST_REPLY') }}</span> {{ Icon('font', 'reply', '', true, 'fas c-button-icon') }}
 			{% endif %}
 		</a>
 	{% endif %}
@@ -49,10 +49,10 @@
 			<fieldset>
 				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="{{ lang('SEARCH_TOPIC') }}" />
 				<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
-					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+					{{ Icon('font', 'search', lang('SEARCH'), true, 'fas c-button-icon') }}
 				</button>
 				<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
-					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
+					{{ Icon('font', 'gear', lang('SEARCH_ADV'), true, 'fas c-button-icon') }}
 				</a>
 				{{ S_SEARCH_LOCAL_HIDDEN_FIELDS }}
 			</fieldset>
@@ -109,7 +109,7 @@
 				<a href="{{ U_VIEW_RESULTS }}" class="button1">{{ lang('VIEW_RESULTS') }}</a>
 				{% endif %}
 				{% if S_CAN_VOTE %}
-				<input type="submit" name="update" value="{{ lang('SUBMIT_VOTE') }}" class="button1" />
+				<input type="submit" name="update" value="{{ lang('SUBMIT_VOTE') }}" class="button1 button button-form" />
 				{% endif %}
 				</div>
 			</fieldset>
@@ -136,7 +136,7 @@
 		<div class="inner">
 
 		<dl class="postprofile" id="profile{{ postrow.POST_ID }}"{% if postrow.S_POST_HIDDEN %} style="display: none;"{% endif %}>
-			<dt class="{% if postrow.RANK_TITLE or postrow.RANK_IMG %}has-profile-rank{% else %}no-profile-rank{% endif %} {% if postrow.POSTER_AVATAR %}has-avatar{% else %}no-avatar{% endif %}">
+			<dt class="{% if postrow.RANK_TITLE or postrow.RANK_IMG %}has-profile-rank{% else %}no-profile-rank{% endif %} has-avatar">
 				<div class="avatar-container">
 					{% if S_PBWOW_AVATARS %}
 					<div class="icons-frame">
@@ -146,9 +146,10 @@
 					</div>
 					{% endif %}
 					{% EVENT viewtopic_body_avatar_before %}
-					{% if postrow.POSTER_AVATAR %}
-						{% if postrow.U_POST_AUTHOR %}<a href="{{ postrow.U_POST_AUTHOR }}" class="avatar">{{ postrow.POSTER_AVATAR }}</a>{% else %}<span class="avatar">{{ postrow.POSTER_AVATAR }}</span>{% endif %}
-					{% endif %}
+					{% include 'avatar.html' with {
+						'avatar_data': postrow.POSTER_AVATAR,
+						'avatar_link': postrow.U_POST_AUTHOR
+					} only %}
 
 				{% if S_PBWOW_SMALL_RANKS %}
 				<div class="rank-icon">
@@ -164,7 +165,7 @@
 			</dt>
 			{% EVENT viewtopic_body_postrow_rank_before %}
 			{% if not S_PBWOW_SMALL_RANKS and (postrow.RANK_TITLE or postrow.RANK_IMG) %}
-		<dd class="profile-rank">{{ postrow.RANK_TITLE }}{% if postrow.RANK_TITLE and postrow.RANK_IMG %}<br />{% endif %}{{ postrow.RANK_IMG }}</dd>{% endif %}
+		<dd class="profile-rank rank-img">{{ postrow.RANK_TITLE }}{% if postrow.RANK_TITLE and postrow.RANK_IMG %}<br />{% endif %}{{ postrow.RANK_IMG }}</dd>{% endif %}
 			{% EVENT viewtopic_body_postrow_rank_after %}
 
 		{% if postrow.POSTER_POSTS != '' %}<dd class="profile-posts"><strong>{{ lang('POSTS') }}{{ lang('COLON') }}</strong> {% if postrow.U_SEARCH !== '' %}<a href="{{ postrow.U_SEARCH }}">{% endif %}{{ postrow.POSTER_POSTS }}{% if postrow.U_SEARCH !== '' %}</a>{% endif %}</dd>{% endif %}
@@ -190,7 +191,7 @@
 				<strong>{{ lang('CONTACT') }}{{ lang('COLON') }}</strong>
 				<div class="dropdown-container dropdown-left">
 					<a href="#" class="dropdown-trigger" title="{{ postrow.CONTACT_USER }}">
-						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">{{ postrow.CONTACT_USER }}</span>
+						{{ Icon('font', 'comment-dots', postrow.CONTACT_USER, true, 'far') }}
 					</a>
 					<div class="dropdown">
 						<div class="pointer"><div class="pointer-inner"></div></div>
@@ -201,9 +202,25 @@
 								{% if REMAINDER == 0 %}
 									<div>
 								{% endif %}
-									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if S_LAST_CELL %} class="last-cell"{% endif %}{% if contact.ID == 'jabber' %} onclick="popup(this.href, 750, 320); return false;"{% endif %}>
+									<a href="{% if contact.U_CONTACT %}{{ contact.U_CONTACT }}{% else %}{{ postrow.U_POST_AUTHOR }}{% endif %}" title="{{ contact.NAME }}"{% if S_LAST_CELL %} class="last-cell"{% endif %}>
 										{% EVENT viewtopic_body_contact_icon_prepend %}
-										<span class="contact-icon {{ contact.ID }}-icon">{{ contact.NAME }}</span>
+										{% if contact.ID == 'pm' %}
+											{{ Icon('font', 'message', '', true, 'far contact-icon') }}
+										{% elseif contact.ID == 'email' %}
+											{{ Icon('font', 'at', '', true, 'fas contact-icon') }}
+										{% elseif contact.ID == 'phpbb_website' %}
+											{{ Icon('font', 'earth-americas', '', true, 'fas contact-icon') }}
+										{% elseif contact.ID == 'phpbb_facebook' %}
+											{{ Icon('font', 'square-facebook', '', true, 'fab contact-icon c-facebook-icon') }}
+										{% elseif contact.ID == 'phpbb_twitter' %}
+											{{ Icon('font', 'square-x-twitter', '', true, 'fab contact-icon c-twitter-icon') }}
+										{% elseif contact.ID == 'phpbb_skype' %}
+											{{ Icon('font', 'skype', '', true, 'fab contact-icon c-skype-icon') }}
+										{% elseif contact.ID == 'phpbb_youtube' %}
+											{{ Icon('font', 'youtube', '', true, 'fab contact-icon c-youtube-icon') }}
+										{% else %}
+											{{ Icon('svg', contact.ID, '', true, 'contact-icon') }}
+										{% endif %}
 										{% EVENT viewtopic_body_contact_icon_append %}
 									</a>
 								{% if REMAINDER == 3 or contact.S_LAST_ROW %}
@@ -281,50 +298,71 @@
 		{% if not S_IS_BOT %}
 			{% if SHOW_POST_BUTTONS %}
 				<ul class="post-buttons">
-					{% EVENT viewtopic_body_post_buttons_before %}
-					{% if postrow.U_EDIT %}
-						<li>
-							<a href="{{ postrow.U_EDIT }}" title="{{ lang('EDIT_POST') }}" class="button button-icon-only">
-								<i class="icon fa-pencil fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_EDIT') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% if postrow.U_DELETE %}
-						<li>
-							<a href="{{ postrow.U_DELETE }}" title="{{ lang('DELETE_POST') }}" class="button button-icon-only">
-								<i class="icon fa-times fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_DELETE') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% if postrow.U_REPORT %}
-						<li>
-							<a href="{{ postrow.U_REPORT }}" title="{{ lang('REPORT_POST') }}" class="button button-icon-only">
-								<i class="icon fa-exclamation-circle fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_REPORT') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% if postrow.U_WARN %}
-						<li>
-							<a href="{{ postrow.U_WARN }}" title="{{ lang('WARN_USER') }}" class="button button-icon-only">
-								<i class="icon fa-exclamation-triangle fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_WARN') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% if postrow.U_INFO %}
-						<li>
-							<a href="{{ postrow.U_INFO }}" title="{{ lang('INFORMATION') }}" class="button button-icon-only">
-								<i class="icon fa-info-circle fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_INFORMATION') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% if postrow.U_QUOTE %}
-						<li>
-							<a href="{{ postrow.U_QUOTE }}" title="{{ lang('REPLY_WITH_QUOTE') }}" class="button button-icon-only">
-								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('BUTTON_QUOTE') }}</span>
-							</a>
-						</li>
-					{% endif %}
-					{% EVENT viewtopic_body_post_buttons_after %}
+					{% with {'post_buttons_hide_text': true} %}
+						{% block post_buttons %}
+							{% EVENT viewtopic_body_post_buttons_before %}
+							{% if postrow.U_EDIT %}
+								<li>
+									<a href="{{ postrow.U_EDIT }}" title="{{ lang('EDIT_POST') }}" class="button button-icon-only">
+										{{ Icon('font', 'pencil', lang('BUTTON_EDIT'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% if postrow.U_DELETE %}
+								<li>
+									<a href="{{ postrow.U_DELETE }}" title="{{ lang('DELETE_POST') }}" class="button button-icon-only">
+										{{ Icon('font', 'xmark', lang('BUTTON_DELETE'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% if postrow.U_REPORT %}
+								<li>
+									<a href="{{ postrow.U_REPORT }}" title="{{ lang('REPORT_POST') }}" class="button button-icon-only">
+										{{ Icon('font', 'circle-exclamation', lang('BUTTON_REPORT'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% if postrow.U_WARN %}
+								<li>
+									<a href="{{ postrow.U_WARN }}" title="{{ lang('WARN_USER') }}" class="button button-icon-only">
+										{{ Icon('font', 'triangle-exclamation', lang('BUTTON_WARN'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% if postrow.U_INFO %}
+								<li>
+									<a href="{{ postrow.U_INFO }}" title="{{ lang('INFORMATION') }}" class="button button-icon-only">
+										{{ Icon('font', 'circle-info', lang('BUTTON_INFORMATION'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% if postrow.U_QUOTE %}
+								<li>
+									<a href="{{ postrow.U_QUOTE }}" title="{{ lang('REPLY_WITH_QUOTE') }}" class="button button-icon-only">
+										{{ Icon('font', 'quote-left', lang('BUTTON_QUOTE'), post_buttons_hide_text, 'fas c-button-icon') }}
+									</a>
+								</li>
+							{% endif %}
+							{% EVENT viewtopic_body_post_buttons_after %}
+						{% endblock post_buttons %}
+					{% endwith %}
+
+					<li class="post-buttons-responsive-menu dropdown-container">
+						<a href="javascript:void(0);" class="button button-icon-only post-button-responsive dropdown-toggle">
+							{{ Icon('font', 'bars', '', true, 'fas c-button-icon') }}
+						</a>
+						<div class="dropdown">
+							<div class="pointer">
+								<div class="pointer-inner"></div>
+							</div>
+
+							<ul class="dropdown-contents">
+								{% with {'post_buttons_hide_text': false} %}
+									{{ block('post_buttons', _self) }}
+								{% endwith %}
+							</ul>
+						</div>
+					</li>
 				</ul>
 			{% endif %}
 		{% endif %}
@@ -332,13 +370,13 @@
 
 			{% EVENT viewtopic_body_postrow_post_details_before %}
 			<p class="author">
-				{% if S_IS_BOT %}
-					<span><i class="icon fa-file fa-fw {% if postrow.S_UNREAD_POST %}icon-red{% else %}icon-lightgray{% endif %} icon-md" aria-hidden="true"></i><span class="sr-only">{{ postrow.MINI_POST }}</span></span>
-				{% else %}
-					<a class="unread" href="{{ postrow.U_MINI_POST }}" title="{{ postrow.MINI_POST }}">
-						<i class="icon fa-file fa-fw {% if postrow.S_UNREAD_POST %}icon-red{% else %}icon-lightgray{% endif %} icon-md" aria-hidden="true"></i><span class="sr-only">{{ postrow.MINI_POST }}</span>
+				<a class="unread" href="{{ postrow.U_MINI_POST }}" title="{{ postrow.MINI_POST }}">
+						{% if postrow.S_UNREAD_POST %}
+							<span>{{ Icon('font', 'file', postrow.MINI_POST, true, 'fas c-topic-unread-icon') }}</span>
+						{% else %}
+							<span>{{ Icon('font', 'file', postrow.MINI_POST, true, 'fas c-topic-icon') }}</span>
+						{% endif %}
 					</a>
-				{% endif %}
 				<span class="responsive-hide">{{ lang('POST_BY_AUTHOR') }} <strong>{{ postrow.POST_AUTHOR_FULL }}</strong> &raquo; </span><time datetime="{{ postrow.POST_DATE_RFC3339 }}">{{ postrow.POST_DATE }}</time>
 			</p>
 			{% EVENT viewtopic_body_postrow_post_details_after %}
@@ -347,17 +385,17 @@
 			{% if postrow.S_CAN_APPROVE %}
 			<form method="post" class="mcp_approve" action="{{ postrow.U_APPROVE_ACTION }}">
 				<p class="post-notice unapproved">
-					<span><i class="icon fa-question icon-red fa-fw" aria-hidden="true"></i></span>
+					<span>{{ Icon('font', 'circle-question', '', true, 'fas c-unapproved-icon') }}</span>
 					<strong>{{ lang('POST_UNAPPROVED_ACTION') }}</strong>
-					<input class="button2" type="submit" value="{{ lang('DISAPPROVE') }}" name="action[disapprove]" />
-					<input class="button1" type="submit" value="{{ lang('APPROVE') }}" name="action[approve]" />
+					<input class="button1 button button-form-bold" type="submit" value="{{ lang('DISAPPROVE') }}" name="action[disapprove]" />
+					<input class="button1 button button-form" type="submit" value="{{ lang('APPROVE') }}" name="action[approve]" />
 					<input type="hidden" name="post_id_list[]" value="{{ postrow.POST_ID }}" />
 					{{ S_FORM_TOKEN }}
 				</p>
 			</form>
 			{% else %}
 				<p class="post-notice unapproved">
-					<span><i class="icon fa-exclamation icon-red fa-fw" aria-hidden="true"></i></span>
+					<span>{{ Icon('font', 'triangle-exclamation', '', true, 'fas c-topic-reported-icon') }}</span>
 					<strong>{{ lang('POST_UNAPPROVED_EXPLAIN') }}</strong>
 				</p>
 			{% endif %}
@@ -366,9 +404,9 @@
 				<p class="post-notice deleted">
 					<strong>{{ lang('POST_DELETED_ACTION') }}</strong>
 					{% if postrow.S_DELETE_PERMANENT %}
-						<input class="button2" type="submit" value="{{ lang('DELETE') }}" name="action[delete]" />
+						<input class="button1 button button-form-bold" type="submit" value="{{ lang('DELETE') }}" name="action[delete]" />
 					{% endif %}
-					<input class="button1" type="submit" value="{{ lang('RESTORE') }}" name="action[restore]" />
+					<input class="button1 button button-form" type="submit" value="{{ lang('RESTORE') }}" name="action[restore]" />
 					<input type="hidden" name="post_id_list[]" value="{{ postrow.POST_ID }}" />
 					{{ S_FORM_TOKEN }}
 				</p>
@@ -377,7 +415,7 @@
 
 			{% if postrow.S_POST_REPORTED %}
 			<p class="post-notice reported">
-				<a href="{{ postrow.U_MCP_REPORT }}"><i class="icon fa-exclamation fa-fw icon-red" aria-hidden="true"></i><strong>{{ lang('POST_REPORTED') }}</strong></a>
+				<a href="{{ postrow.U_MCP_REPORT }}">{{ Icon('font', 'triangle-exclamation', '', true, 'fas c-topic-reported-icon') }}<strong>{{ lang('POST_REPORTED') }}</strong></a>
 			</p>
 			{% endif %}
 
@@ -450,9 +488,9 @@
 	{% if not S_IS_BOT and S_DISPLAY_REPLY_INFO %}
 		<a href="{{ U_POST_REPLY_TOPIC }}" class="button" title="{% if S_IS_LOCKED %}{{ lang('TOPIC_LOCKED') }}{% else %}{{ lang('POST_REPLY') }}{% endif %}">
 			{% if S_IS_LOCKED %}
-				<span>{{ lang('BUTTON_TOPIC_LOCKED') }}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+				<span>{{ lang('BUTTON_TOPIC_LOCKED') }}</span> {{ Icon('font', 'lock', '', true, 'fas c-button-icon') }}
 			{% else %}
-				<span>{{ lang('BUTTON_POST_REPLY') }}</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+				<span>{{ lang('BUTTON_POST_REPLY') }}</span> {{ Icon('font', 'reply', '', true, 'fas c-button-icon') }}
 			{% endif %}
 		</a>
 	{% endif %}
@@ -469,8 +507,8 @@
 	{% if loops.quickmod|length %}
 	<div class="quickmod dropdown-container dropdown-container-left dropdown-up dropdown-{{ S_CONTENT_FLOW_END }} dropdown-button-control" id="quickmod">
 		<span title="{{ lang('QUICK_MOD') }}" class="button button-secondary dropdown-trigger dropdown-select">
-			<i class="icon fa-gavel fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('QUICK_MOD') }}</span>
-			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			{{ Icon('font', 'gavel', lang('QUICK_MOD'), true, 'fas c-button-icon') }}
+			<span class="caret">{{ Icon('font', 'caret-down', '', true, 'fas c-button-icon') }}</span>
 		</span>
 		<div class="dropdown">
 				<div class="pointer"><div class="pointer-inner"></div></div>

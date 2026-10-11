@@ -71,19 +71,19 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.fa-times:before {
+.fa-times:before, .fa-xmark:before {
 	color: red;
 }
 
-.fa-exclamation-circle::before {
+.fa-exclamation-circle::before, .fa-circle-exclamation::before {
 	color: #F40;
 }
 
-.fa-warning:before, .fa-exclamation-triangle:before {
+.fa-warning:before, .fa-exclamation-triangle:before, .fa-triangle-exclamation:before {
 	color: #FFB019;
 }
 
-.fa-info-circle:before {
+.fa-info-circle:before, .fa-circle-info:before {
 	color: #00B6FF;
 }
 
