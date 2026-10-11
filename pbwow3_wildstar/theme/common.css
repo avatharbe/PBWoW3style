@@ -1120,3 +1120,12 @@ p.post-notice.unapproved:before	{ content: "\f0e3"; }
 	background-position: 0 -60px;
 }
 
+
+/* This style re-enables the .navbar decoration after pbwow3_heroes/theme/responsive.css hides it
+   on small screens; hide it again, or it runs 10px past the screen edge */
+@media (max-width: 700px) {
+	.navbar:before,
+	.navbar:after {
+		display: none;
+	}
+}
