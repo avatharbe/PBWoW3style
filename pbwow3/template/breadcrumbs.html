@@ -7,7 +7,7 @@
 			{% if U_SITE_HOME %}
 			    <span class="crumb" {{ MICRODATA }}>
 					<a href="{{ U_SITE_HOME }}" itemprop="item" data-navbar-reference="home">
-						<i class="icon fa-home fa-fw" aria-hidden="true"></i>
+						{{ Icon('font', 'home', '', true, 'fas o-icon-baseline') }}
 						<span itemprop="name">{{ lang('SITE_HOME') }}</span>
 					</a>
 					<meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />
@@ -17,7 +17,7 @@
 			<span class="crumb" {{ MICRODATA }}>
 				<a href="{{ U_INDEX }}" itemprop="item" accesskey="h" data-navbar-reference="index">
 					{% if not U_SITE_HOME %}
-					<i class="icon fa-home fa-fw"></i>
+					{{ Icon('font', 'home', '', true, 'fas o-icon-baseline') }}
 					{% endif %}
 					<span itemprop="name">{{ lang('INDEX') }}</span>
 				</a>
@@ -40,7 +40,7 @@
 		{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
 		<li class="rightside responsive-search">
 			<a href="{{ U_SEARCH }}" title="{{ lang('SEARCH_ADV_EXPLAIN') }}" role="menuitem">
-				<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+				{{ Icon('font', 'search', lang('SEARCH'), true) }}
 			</a>
 		</li>
 		{% endif %}
