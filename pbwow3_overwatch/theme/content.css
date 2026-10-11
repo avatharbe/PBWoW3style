@@ -1031,11 +1031,6 @@ fieldset.polls dl.most-votes dd.resultbar div:before {
 	position: relative;
 }
 
-.no-avatar .avatar-container {
-	background: url("./images/avatar-sprite.png") 50% -9px no-repeat;
-	padding-top: 20px;
-}
-
 .postprofile .avatar {
 	max-width: 100%;
 	display: inline-block;
