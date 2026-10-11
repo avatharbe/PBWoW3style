@@ -5,6 +5,7 @@
 {% EVENT index_body_markforums_before %}
 
 {% EVENT index_body_markforums_after %}
+{% EVENT index_body_forumlist_body_before %}
 
 {% INCLUDE 'forumlist_body.html' %}
 
@@ -19,7 +20,21 @@
 			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br />
 			{% if U_VIEWONLINE %}
 				<br />{{ LOGGED_IN_USER_LIST }}
-				{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
+				{% if LEGEND|length > 0 %}
+					{% apply spaceless %}
+						<br>
+						<em>
+							{{ lang('LEGEND') ~ lang('COLON') }}
+							{% for group in LEGEND %}
+								{% if group.GROUP_URL %}
+									<a style="color:#{{ group.GROUP_COLOR }}" href="{{ group.GROUP_URL }}">{{ group.GROUP_NAME }}</a>{% if not loop.last %}, {% endif %}
+								{% else %}
+									<span style="color:#{{ group.GROUP_COLOR }}">{{ group.GROUP_NAME }}</span>{% if not loop.last %}, {% endif %}
+								{% endif %}
+							{% endfor %}
+						</em>
+					{% endapply %}
+				{% endif %}
 			{% endif %}
 			{% EVENT index_body_block_online_append %}
 			{% if U_VIEWONLINE %}<a class="online-pagelink" href="{{ U_VIEWONLINE }}" title="{{ lang('WHO_IS_ONLINE') }}">{{ LAST_POST_IMG }}</a>{% endif %}
