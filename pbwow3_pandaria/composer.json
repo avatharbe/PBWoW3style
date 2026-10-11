@@ -1,0 +1,17 @@
+{
+    "name": "avathar/pbwow3-pandaria",
+    "description": "PBWoW3_Pandaria style for phpBB, based on PBWoW3",
+    "type": "phpbb-style",
+    "version": "4.0.0-dev",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Sajaki"
+        }
+    ],
+    "extra": {
+        "display-name": "PBWoW3_Pandaria",
+        "phpbb-version": "4.0.0-a3",
+        "parent-style": "PBWoW3"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "avathar/pbwow3",
+    "description": "PBWoW3 style for phpBB",
+    "type": "phpbb-style",
+    "version": "4.0.0-dev",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Sajaki"
+        }
+    ],
+    "extra": {
+        "display-name": "PBWoW3",
+        "phpbb-version": "4.0.0-a3",
+        "parent-style": "prosilver"
+    }
+}
